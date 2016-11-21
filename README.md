@@ -1,2 +1,2 @@
 # JamCanvas
-Senior Design Project
+THE BEST Senior Design Project
