@@ -1,0 +1,49 @@
+#startPage {
+	background-color: $c-black;
+	color: $c-white;
+	@include cover;
+
+	.titles {
+		@include center;
+		text-align: center;
+		.btn {
+			background-color: $c-red;
+		}
+	}
+}
+
+#selectPage {
+	.playlist {
+		background-color: $c-white;
+		width: 40%;
+		float: left;
+		height: 100%;
+	}
+	.action-wrapper {
+		background-color: $c-light-grey;
+		height: 100%;
+		overflow: hidden;
+		width: auto;
+		position: relative;
+		.demo-img {
+			background-color: $c-black;
+			width: 70%;
+			height: 40%;
+			margin: 40px auto;
+		}
+		.action-buttons {
+			width: 200px;
+			margin: auto;
+			.btn {
+				background-color: $c-blue;
+				margin: 30px auto;
+				color: $c-white;
+				width: 100%;
+				padding: 10px 0;
+				text-align: center;
+			}
+		}
+	}
+}
+
+
