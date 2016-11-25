@@ -2,9 +2,15 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width">
-		<title>"Test for Jamcanvas"</title> 
+		<title>JamCanvas</title> 
+
+		<script src="scripts/jquery-3.1.1.min.js"></script>
 	</head> 
 	<body>
+		<div id="startPage"></div>
+		<div id="selectPage"></div>
+		<div id="canvasPage"></div>
+
 		<h1>Test visualization</h1>
 		<canvas class="visualizer" width="640" height="100"></canvas> d
 
@@ -18,6 +24,7 @@
         <!-- The following element pulls in the script for the default template functionality -->
         <script src="scripts/install.js"></script>  
   	  	<!-- Below is your custom application script -->
+  	  	<script src="scripts/control.js"></script>
     	<script src="scripts/app.js"></script>
 	</body> 
 </html>
