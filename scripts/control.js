@@ -7,6 +7,6 @@ var pages = {
 $(document).ready(function() {
 	for (var i in pages) {
 		var pageName = pages[i];
-		$("#" + pageName).load("scripts/" + pageName + ".html");
+		$("#" + pageName).load("views/" + pageName + ".html");
 	}
 });
