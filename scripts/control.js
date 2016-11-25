@@ -4,9 +4,15 @@ var pages = {
 	1: "selectPage",
 	2: "canvasPage"
 }
+
 $(document).ready(function() {
-	for (var i in pages) {
-		var pageName = pages[i];
-		$("#" + pageName).load("views/" + pageName + ".html");
-	}
+	changePage(currentPage);
 });
+
+function changePage(pageIndex) {
+	var pageName = pages[pageIndex];
+	$("#page").load("views/" + pageName + ".html", function() {
+		$.getScript("scripts/directives/" + pageName + ".js");
+		currentPage = pageIndex;
+	});
+}
