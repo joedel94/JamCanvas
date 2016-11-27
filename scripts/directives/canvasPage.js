@@ -134,7 +134,7 @@ function visualize() {
 
       analyser.getByteFrequencyData(dataArray);
 
-      canvasCtx.fillStyle = 'rgb(0, 0, 0)';
+      canvasCtx.fillStyle = 'rgb(200, 200, 200)';
       canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 
       var barWidth = (WIDTH / bufferLength) * 2.5;
