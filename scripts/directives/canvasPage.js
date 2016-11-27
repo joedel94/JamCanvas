@@ -65,12 +65,12 @@ function visualize() {
 
 
   var visualSetting = visualSelect.value;
-  console.log(visualSetting);
 
   if(visualSetting == "sinewave") {
     analyser.fftSize = 2048;
     var bufferLength = analyser.fftSize;
-    console.log(bufferLength);
+    var freqBuffLength = analyser.frequencyBinCount;
+    var freqDataArray = new Uint8Array(freqBuffLength);
     var dataArray = new Uint8Array(bufferLength);
 
     canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
@@ -80,6 +80,8 @@ function visualize() {
       drawVisual = requestAnimationFrame(draw);
 
       analyser.getByteTimeDomainData(dataArray);
+      analyser.getByteFrequencyData(freqDataArray);
+
 
       canvasCtx.fillStyle = 'rgb(200, 200, 200)';
       canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
@@ -97,10 +99,12 @@ function visualize() {
         var v = dataArray[i] / 128.0;
         var y = v * HEIGHT/2;
 
-		
-		if (y > 60){
-			canvasCtx.strokeStyle = '#FFFFFF'      
-		}
+        if(freqDataArray[i]>140){
+          canvasCtx.strokeStyle = 'rgb(' + (freqDataArray[i]+50) + ',100,100)';
+          if(freqDataArray[i]>150){
+		      canvasCtx.strokeStyle = 'rgb(' + (freqDataArray[i]+100) + ',50,50)'; 
+          }
+        }
 
         if(i === 0) {
           canvasCtx.moveTo(x, y);
