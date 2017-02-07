@@ -1,0 +1,58 @@
+.building {
+
+	position: absolute;
+	bottom: 0;
+	left: 5px; //temporary
+	height: 50%; //temporary
+	width: 100px; //temporary
+
+	.block {
+		@include middle;
+	}
+	.window {
+		background: $c-grey;
+		width: 10px;
+	}
+	&.high-frequency {
+		.block {
+			background: $c-black;		
+		}
+		.shape {
+			border-color: $c-black;
+		}
+	}
+	&.med-frequency {
+		.block {
+			background: $c-grey;
+		}
+	}
+}
+
+.building0 {
+	.block0 {
+		width: 100%;
+		height: 70%;
+	}
+	.block1{
+		width: 80%;
+		height: 80%;
+	}
+	.block2{
+		width: 60%;
+		height: 85%;
+	}
+	.block3{
+		width: 40%;
+		height: 90%;
+	}
+	.block4 {
+		width: 0;
+		height: 0;
+		@include middle;
+		bottom: 90%;
+		border-left: 12px solid transparent !important;
+		border-right: 12px solid transparent !important;
+		border-bottom: 30px solid $c-grey; //will get overwritten		
+	}
+
+}

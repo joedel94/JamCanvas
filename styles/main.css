@@ -3,6 +3,51 @@
   padding: 10px 15px;
   cursor: pointer; }
 
+.building {
+  position: absolute;
+  bottom: 0;
+  left: 5px;
+  height: 50%;
+  width: 100px; }
+  .building .block {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); }
+  .building .window {
+    background: #c8ccce;
+    width: 10px; }
+  .building.high-frequency .block {
+    background: #000000; }
+  .building.high-frequency .shape {
+    border-color: #000000; }
+  .building.med-frequency .block {
+    background: #c8ccce; }
+
+.building0 .block0 {
+  width: 100%;
+  height: 70%; }
+.building0 .block1 {
+  width: 80%;
+  height: 80%; }
+.building0 .block2 {
+  width: 60%;
+  height: 85%; }
+.building0 .block3 {
+  width: 40%;
+  height: 90%; }
+.building0 .block4 {
+  width: 0;
+  height: 0;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 90%;
+  border-left: 12px solid transparent !important;
+  border-right: 12px solid transparent !important;
+  border-bottom: 30px solid #c8ccce; }
+
 #startPage {
   background-color: #000000;
   color: #FFFFFF;
@@ -44,6 +89,9 @@
       width: 100%;
       padding: 10px 0;
       text-align: center; }
+
+#canvasPage .mic-demo {
+  display: none; }
 
 body {
   width: 100%;
