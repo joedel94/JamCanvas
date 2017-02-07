@@ -9,10 +9,7 @@
 	.block {
 		@include middle;
 	}
-	.window {
-		background: $c-grey;
-		width: 10px;
-	}
+
 	&.high-frequency {
 		.block {
 			background: $c-black;		
@@ -26,6 +23,20 @@
 			background: $c-grey;
 		}
 	}
+}
+//define the container that will hold windows, may be attatched to a block
+//windows added through JS
+.window {
+	background: $c-grey;
+    width: 20px;
+    height: 30px;
+    border: 2px solid black;
+    display: inline-block;
+    
+}
+.windows {
+	z-index: 1;
+	@include middle;
 }
 
 .building0 {

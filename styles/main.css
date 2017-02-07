@@ -14,15 +14,26 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-50%); }
-  .building .window {
-    background: #c8ccce;
-    width: 10px; }
   .building.high-frequency .block {
     background: #000000; }
   .building.high-frequency .shape {
     border-color: #000000; }
   .building.med-frequency .block {
     background: #c8ccce; }
+
+.window {
+  background: #c8ccce;
+  width: 20px;
+  height: 30px;
+  border: 2px solid black;
+  display: inline-block; }
+
+.windows {
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%); }
 
 .building0 .block0 {
   width: 100%;
