@@ -4,8 +4,14 @@
 		<div class="demo-img"></div>
 		<div class="action-buttons">
 			<div class="btn"><label for="Song">Upload Song</label>
-				<input type="file" name="song" id="song">
-				<input type="submit">
+				<form ref="uploadForm"
+					id="uploadForm"
+					action="http://localhost:8000/upload"
+					method="post"
+					encType="multipart/form-data">
+					<input type="file" name="song" id="song">
+					<input type="submit" value="Upload">
+				</form>
 			</div>
 			<div class="btn" onclick="changePage(2)">BEGIN PROJECTION</div>
 		</div>
