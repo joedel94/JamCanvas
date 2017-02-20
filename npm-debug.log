@@ -1,0 +1,587 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'import',
+1 verbose cli   '-g' ]
+2 info using npm@3.10.8
+3 info using node@v6.9.1
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readGlobalPackageData
+7 silly fetchPackageMetaData import
+8 silly fetchNamedPackageData import
+9 silly mapToRegistry name import
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry data Result {
+12 silly mapToRegistry   raw: 'import',
+12 silly mapToRegistry   scope: null,
+12 silly mapToRegistry   escapedName: 'import',
+12 silly mapToRegistry   name: 'import',
+12 silly mapToRegistry   rawSpec: '',
+12 silly mapToRegistry   spec: 'latest',
+12 silly mapToRegistry   type: 'tag' }
+13 silly mapToRegistry uri https://registry.npmjs.org/import
+14 verbose request uri https://registry.npmjs.org/import
+15 verbose request no auth needed
+16 info attempt registry request try #1 at 6:43:17 PM
+17 verbose request id 858d8bd3f0df278b
+18 http request GET https://registry.npmjs.org/import
+19 http 200 https://registry.npmjs.org/import
+20 verbose headers { server: 'nginx/1.10.1',
+20 verbose headers   'content-type': 'application/json',
+20 verbose headers   'last-modified': 'Sun, 04 Dec 2016 06:16:42 GMT',
+20 verbose headers   etag: 'W/"5843b4ca-1650"',
+20 verbose headers   'content-encoding': 'gzip',
+20 verbose headers   'cache-control': 'max-age=300',
+20 verbose headers   'content-length': '1262',
+20 verbose headers   'accept-ranges': 'bytes',
+20 verbose headers   date: 'Mon, 20 Feb 2017 23:43:17 GMT',
+20 verbose headers   via: '1.1 varnish',
+20 verbose headers   age: '0',
+20 verbose headers   connection: 'keep-alive',
+20 verbose headers   'x-served-by': 'cache-iad2142-IAD',
+20 verbose headers   'x-cache': 'MISS',
+20 verbose headers   'x-cache-hits': '0',
+20 verbose headers   'x-timer': 'S1487634197.405820,VS0,VE73',
+20 verbose headers   vary: 'Accept-Encoding' }
+21 silly get cb [ 200,
+21 silly get   { server: 'nginx/1.10.1',
+21 silly get     'content-type': 'application/json',
+21 silly get     'last-modified': 'Sun, 04 Dec 2016 06:16:42 GMT',
+21 silly get     etag: 'W/"5843b4ca-1650"',
+21 silly get     'content-encoding': 'gzip',
+21 silly get     'cache-control': 'max-age=300',
+21 silly get     'content-length': '1262',
+21 silly get     'accept-ranges': 'bytes',
+21 silly get     date: 'Mon, 20 Feb 2017 23:43:17 GMT',
+21 silly get     via: '1.1 varnish',
+21 silly get     age: '0',
+21 silly get     connection: 'keep-alive',
+21 silly get     'x-served-by': 'cache-iad2142-IAD',
+21 silly get     'x-cache': 'MISS',
+21 silly get     'x-cache-hits': '0',
+21 silly get     'x-timer': 'S1487634197.405820,VS0,VE73',
+21 silly get     vary: 'Accept-Encoding' } ]
+22 verbose get saving import to /Users/Betina/.npm/registry.npmjs.org/import/.cache.json
+23 verbose correctMkdir /Users/Betina/.npm correctMkdir not in flight; initializing
+24 silly install normalizeTree
+25 silly loadCurrentTree Finishing
+26 silly loadIdealTree Starting
+27 silly install loadIdealTree
+28 silly cloneCurrentTree Starting
+29 silly install cloneCurrentTreeToIdealTree
+30 silly cloneCurrentTree Finishing
+31 silly loadShrinkwrap Starting
+32 silly install loadShrinkwrap
+33 silly loadShrinkwrap Finishing
+34 silly loadAllDepsIntoIdealTree Starting
+35 silly install loadAllDepsIntoIdealTree
+36 silly resolveWithNewModule import@0.0.6 checking installable status
+37 silly cache add args [ 'import', null ]
+38 verbose cache add spec import
+39 silly cache add parsed spec Result {
+39 silly cache add   raw: 'import',
+39 silly cache add   scope: null,
+39 silly cache add   escapedName: 'import',
+39 silly cache add   name: 'import',
+39 silly cache add   rawSpec: '',
+39 silly cache add   spec: 'latest',
+39 silly cache add   type: 'tag' }
+40 silly addNamed import@latest
+41 verbose addNamed "latest" is being treated as a dist-tag for import
+42 info addNameTag [ 'import', 'latest' ]
+43 silly mapToRegistry name import
+44 silly mapToRegistry using default registry
+45 silly mapToRegistry registry https://registry.npmjs.org/
+46 silly mapToRegistry data Result {
+46 silly mapToRegistry   raw: 'import',
+46 silly mapToRegistry   scope: null,
+46 silly mapToRegistry   escapedName: 'import',
+46 silly mapToRegistry   name: 'import',
+46 silly mapToRegistry   rawSpec: '',
+46 silly mapToRegistry   spec: 'latest',
+46 silly mapToRegistry   type: 'tag' }
+47 silly mapToRegistry uri https://registry.npmjs.org/import
+48 verbose addNameTag registry:https://registry.npmjs.org/import not in flight; fetching
+49 verbose get https://registry.npmjs.org/import not expired, no request
+50 silly addNameTag next cb for import with tag latest
+51 silly addNamed import@0.0.6
+52 verbose addNamed "0.0.6" is a plain semver version for import
+53 silly mapToRegistry name import
+54 silly mapToRegistry using default registry
+55 silly mapToRegistry registry https://registry.npmjs.org/
+56 silly mapToRegistry data Result {
+56 silly mapToRegistry   raw: 'import',
+56 silly mapToRegistry   scope: null,
+56 silly mapToRegistry   escapedName: 'import',
+56 silly mapToRegistry   name: 'import',
+56 silly mapToRegistry   rawSpec: '',
+56 silly mapToRegistry   spec: 'latest',
+56 silly mapToRegistry   type: 'tag' }
+57 silly mapToRegistry uri https://registry.npmjs.org/import
+58 verbose addRemoteTarball https://registry.npmjs.org/import/-/import-0.0.6.tgz not in flight; adding
+59 verbose addRemoteTarball [ 'https://registry.npmjs.org/import/-/import-0.0.6.tgz',
+59 verbose addRemoteTarball   'd0eb79df86aa2677c6db61578a5212b3031e6042' ]
+60 info retry fetch attempt 1 at 6:43:17 PM
+61 info attempt registry request try #1 at 6:43:17 PM
+62 http fetch GET https://registry.npmjs.org/import/-/import-0.0.6.tgz
+63 http fetch 200 https://registry.npmjs.org/import/-/import-0.0.6.tgz
+64 silly fetchAndShaCheck shasum d0eb79df86aa2677c6db61578a5212b3031e6042
+65 verbose addTmpTarball /var/folders/xc/4nmb7fs978500br14wy29dn00000gn/T/npm-14736-ebfc8097/registry.npmjs.org/import/-/import-0.0.6.tgz not in flight; adding
+66 verbose addTmpTarball already have metadata; skipping unpack for import@0.0.6
+67 verbose correctMkdir /Users/Betina/.npm correctMkdir not in flight; initializing
+68 silly cache afterAdd import@0.0.6
+69 verbose afterAdd /Users/Betina/.npm/import/0.0.6/package/package.json not in flight; writing
+70 verbose correctMkdir /Users/Betina/.npm correctMkdir not in flight; initializing
+71 verbose afterAdd /Users/Betina/.npm/import/0.0.6/package/package.json written
+72 silly fetchNamedPackageData optimist
+73 silly mapToRegistry name optimist
+74 silly mapToRegistry using default registry
+75 silly mapToRegistry registry https://registry.npmjs.org/
+76 silly mapToRegistry data Result {
+76 silly mapToRegistry   raw: 'optimist',
+76 silly mapToRegistry   scope: null,
+76 silly mapToRegistry   escapedName: 'optimist',
+76 silly mapToRegistry   name: 'optimist',
+76 silly mapToRegistry   rawSpec: '',
+76 silly mapToRegistry   spec: 'latest',
+76 silly mapToRegistry   type: 'tag' }
+77 silly mapToRegistry uri https://registry.npmjs.org/optimist
+78 verbose request uri https://registry.npmjs.org/optimist
+79 verbose request no auth needed
+80 info attempt registry request try #1 at 6:43:17 PM
+81 verbose etag W/"582f0669-b6f3"
+82 verbose lastModified Fri, 18 Nov 2016 13:47:21 GMT
+83 http request GET https://registry.npmjs.org/optimist
+84 http 200 https://registry.npmjs.org/optimist
+85 verbose headers { server: 'nginx/1.10.1',
+85 verbose headers   'content-type': 'application/json',
+85 verbose headers   'last-modified': 'Wed, 01 Feb 2017 06:00:04 GMT',
+85 verbose headers   etag: 'W/"58917964-b774"',
+85 verbose headers   'content-encoding': 'gzip',
+85 verbose headers   'cache-control': 'max-age=300',
+85 verbose headers   'content-length': '8259',
+85 verbose headers   'accept-ranges': 'bytes',
+85 verbose headers   date: 'Mon, 20 Feb 2017 23:43:17 GMT',
+85 verbose headers   via: '1.1 varnish',
+85 verbose headers   age: '33',
+85 verbose headers   connection: 'keep-alive',
+85 verbose headers   'x-served-by': 'cache-iad2142-IAD',
+85 verbose headers   'x-cache': 'HIT',
+85 verbose headers   'x-cache-hits': '3',
+85 verbose headers   'x-timer': 'S1487634197.705208,VS0,VE0',
+85 verbose headers   vary: 'Accept-Encoding' }
+86 silly get cb [ 200,
+86 silly get   { server: 'nginx/1.10.1',
+86 silly get     'content-type': 'application/json',
+86 silly get     'last-modified': 'Wed, 01 Feb 2017 06:00:04 GMT',
+86 silly get     etag: 'W/"58917964-b774"',
+86 silly get     'content-encoding': 'gzip',
+86 silly get     'cache-control': 'max-age=300',
+86 silly get     'content-length': '8259',
+86 silly get     'accept-ranges': 'bytes',
+86 silly get     date: 'Mon, 20 Feb 2017 23:43:17 GMT',
+86 silly get     via: '1.1 varnish',
+86 silly get     age: '33',
+86 silly get     connection: 'keep-alive',
+86 silly get     'x-served-by': 'cache-iad2142-IAD',
+86 silly get     'x-cache': 'HIT',
+86 silly get     'x-cache-hits': '3',
+86 silly get     'x-timer': 'S1487634197.705208,VS0,VE0',
+86 silly get     vary: 'Accept-Encoding' } ]
+87 verbose get saving optimist to /Users/Betina/.npm/registry.npmjs.org/optimist/.cache.json
+88 verbose correctMkdir /Users/Betina/.npm correctMkdir not in flight; initializing
+89 silly resolveWithNewModule optimist@0.3.7 checking installable status
+90 silly cache add args [ 'optimist@0.3.x', null ]
+91 verbose cache add spec optimist@0.3.x
+92 silly cache add parsed spec Result {
+92 silly cache add   raw: 'optimist@0.3.x',
+92 silly cache add   scope: null,
+92 silly cache add   escapedName: 'optimist',
+92 silly cache add   name: 'optimist',
+92 silly cache add   rawSpec: '0.3.x',
+92 silly cache add   spec: '>=0.3.0 <0.4.0',
+92 silly cache add   type: 'range' }
+93 silly addNamed optimist@>=0.3.0 <0.4.0
+94 verbose addNamed ">=0.3.0 <0.4.0" is a valid semver range for optimist
+95 silly addNameRange { name: 'optimist', range: '>=0.3.0 <0.4.0', hasData: false }
+96 silly mapToRegistry name optimist
+97 silly mapToRegistry using default registry
+98 silly mapToRegistry registry https://registry.npmjs.org/
+99 silly mapToRegistry data Result {
+99 silly mapToRegistry   raw: 'optimist',
+99 silly mapToRegistry   scope: null,
+99 silly mapToRegistry   escapedName: 'optimist',
+99 silly mapToRegistry   name: 'optimist',
+99 silly mapToRegistry   rawSpec: '',
+99 silly mapToRegistry   spec: 'latest',
+99 silly mapToRegistry   type: 'tag' }
+100 silly mapToRegistry uri https://registry.npmjs.org/optimist
+101 verbose addNameRange registry:https://registry.npmjs.org/optimist not in flight; fetching
+102 verbose get https://registry.npmjs.org/optimist not expired, no request
+103 silly addNameRange number 2 { name: 'optimist', range: '>=0.3.0 <0.4.0', hasData: true }
+104 silly addNameRange versions [ 'optimist',
+104 silly addNameRange   [ '0.0.1',
+104 silly addNameRange     '0.0.2',
+104 silly addNameRange     '0.0.4',
+104 silly addNameRange     '0.0.5',
+104 silly addNameRange     '0.0.6',
+104 silly addNameRange     '0.0.7',
+104 silly addNameRange     '0.1.0',
+104 silly addNameRange     '0.1.1',
+104 silly addNameRange     '0.1.2',
+104 silly addNameRange     '0.1.3',
+104 silly addNameRange     '0.1.4',
+104 silly addNameRange     '0.1.5',
+104 silly addNameRange     '0.1.6',
+104 silly addNameRange     '0.1.7',
+104 silly addNameRange     '0.1.8',
+104 silly addNameRange     '0.1.9',
+104 silly addNameRange     '0.0.3',
+104 silly addNameRange     '0.2.0',
+104 silly addNameRange     '0.2.1',
+104 silly addNameRange     '0.2.2',
+104 silly addNameRange     '0.2.3',
+104 silly addNameRange     '0.2.4',
+104 silly addNameRange     '0.2.5',
+104 silly addNameRange     '0.2.6',
+104 silly addNameRange     '0.2.7',
+104 silly addNameRange     '0.2.8',
+104 silly addNameRange     '0.3.0',
+104 silly addNameRange     '0.3.1',
+104 silly addNameRange     '0.3.3',
+104 silly addNameRange     '0.3.4',
+104 silly addNameRange     '0.3.5',
+104 silly addNameRange     '0.3.6',
+104 silly addNameRange     '0.3.7',
+104 silly addNameRange     '0.4.0',
+104 silly addNameRange     '0.5.0',
+104 silly addNameRange     '0.5.1',
+104 silly addNameRange     '0.5.2',
+104 silly addNameRange     '0.6.0',
+104 silly addNameRange     '0.6.1' ] ]
+105 silly addNamed optimist@0.3.7
+106 verbose addNamed "0.3.7" is a plain semver version for optimist
+107 silly cache afterAdd optimist@0.3.7
+108 verbose afterAdd /Users/Betina/.npm/optimist/0.3.7/package/package.json not in flight; writing
+109 verbose correctMkdir /Users/Betina/.npm correctMkdir not in flight; initializing
+110 verbose afterAdd /Users/Betina/.npm/optimist/0.3.7/package/package.json written
+111 silly fetchNamedPackageData wordwrap
+112 silly mapToRegistry name wordwrap
+113 silly mapToRegistry using default registry
+114 silly mapToRegistry registry https://registry.npmjs.org/
+115 silly mapToRegistry data Result {
+115 silly mapToRegistry   raw: 'wordwrap',
+115 silly mapToRegistry   scope: null,
+115 silly mapToRegistry   escapedName: 'wordwrap',
+115 silly mapToRegistry   name: 'wordwrap',
+115 silly mapToRegistry   rawSpec: '',
+115 silly mapToRegistry   spec: 'latest',
+115 silly mapToRegistry   type: 'tag' }
+116 silly mapToRegistry uri https://registry.npmjs.org/wordwrap
+117 verbose request uri https://registry.npmjs.org/wordwrap
+118 verbose request no auth needed
+119 info attempt registry request try #1 at 6:43:17 PM
+120 verbose etag W/"5818e589-1acd"
+121 verbose lastModified Tue, 01 Nov 2016 18:57:13 GMT
+122 http request GET https://registry.npmjs.org/wordwrap
+123 http 200 https://registry.npmjs.org/wordwrap
+124 verbose headers { server: 'nginx/1.10.1',
+124 verbose headers   'content-type': 'application/json',
+124 verbose headers   'last-modified': 'Wed, 07 Dec 2016 18:43:52 GMT',
+124 verbose headers   etag: 'W/"58485868-1ae0"',
+124 verbose headers   'content-encoding': 'gzip',
+124 verbose headers   'cache-control': 'max-age=300',
+124 verbose headers   'content-length': '1828',
+124 verbose headers   'accept-ranges': 'bytes',
+124 verbose headers   date: 'Mon, 20 Feb 2017 23:43:17 GMT',
+124 verbose headers   via: '1.1 varnish',
+124 verbose headers   age: '278',
+124 verbose headers   connection: 'keep-alive',
+124 verbose headers   'x-served-by': 'cache-iad2142-IAD',
+124 verbose headers   'x-cache': 'HIT',
+124 verbose headers   'x-cache-hits': '17',
+124 verbose headers   'x-timer': 'S1487634197.923285,VS0,VE0',
+124 verbose headers   vary: 'Accept-Encoding' }
+125 silly get cb [ 200,
+125 silly get   { server: 'nginx/1.10.1',
+125 silly get     'content-type': 'application/json',
+125 silly get     'last-modified': 'Wed, 07 Dec 2016 18:43:52 GMT',
+125 silly get     etag: 'W/"58485868-1ae0"',
+125 silly get     'content-encoding': 'gzip',
+125 silly get     'cache-control': 'max-age=300',
+125 silly get     'content-length': '1828',
+125 silly get     'accept-ranges': 'bytes',
+125 silly get     date: 'Mon, 20 Feb 2017 23:43:17 GMT',
+125 silly get     via: '1.1 varnish',
+125 silly get     age: '278',
+125 silly get     connection: 'keep-alive',
+125 silly get     'x-served-by': 'cache-iad2142-IAD',
+125 silly get     'x-cache': 'HIT',
+125 silly get     'x-cache-hits': '17',
+125 silly get     'x-timer': 'S1487634197.923285,VS0,VE0',
+125 silly get     vary: 'Accept-Encoding' } ]
+126 verbose get saving wordwrap to /Users/Betina/.npm/registry.npmjs.org/wordwrap/.cache.json
+127 verbose correctMkdir /Users/Betina/.npm correctMkdir not in flight; initializing
+128 silly resolveWithNewModule wordwrap@0.0.3 checking installable status
+129 silly cache add args [ 'wordwrap@~0.0.2', null ]
+130 verbose cache add spec wordwrap@~0.0.2
+131 silly cache add parsed spec Result {
+131 silly cache add   raw: 'wordwrap@~0.0.2',
+131 silly cache add   scope: null,
+131 silly cache add   escapedName: 'wordwrap',
+131 silly cache add   name: 'wordwrap',
+131 silly cache add   rawSpec: '~0.0.2',
+131 silly cache add   spec: '>=0.0.2 <0.1.0',
+131 silly cache add   type: 'range' }
+132 silly addNamed wordwrap@>=0.0.2 <0.1.0
+133 verbose addNamed ">=0.0.2 <0.1.0" is a valid semver range for wordwrap
+134 silly addNameRange { name: 'wordwrap', range: '>=0.0.2 <0.1.0', hasData: false }
+135 silly mapToRegistry name wordwrap
+136 silly mapToRegistry using default registry
+137 silly mapToRegistry registry https://registry.npmjs.org/
+138 silly mapToRegistry data Result {
+138 silly mapToRegistry   raw: 'wordwrap',
+138 silly mapToRegistry   scope: null,
+138 silly mapToRegistry   escapedName: 'wordwrap',
+138 silly mapToRegistry   name: 'wordwrap',
+138 silly mapToRegistry   rawSpec: '',
+138 silly mapToRegistry   spec: 'latest',
+138 silly mapToRegistry   type: 'tag' }
+139 silly mapToRegistry uri https://registry.npmjs.org/wordwrap
+140 verbose addNameRange registry:https://registry.npmjs.org/wordwrap not in flight; fetching
+141 verbose get https://registry.npmjs.org/wordwrap not expired, no request
+142 silly addNameRange number 2 { name: 'wordwrap', range: '>=0.0.2 <0.1.0', hasData: true }
+143 silly addNameRange versions [ 'wordwrap', [ '0.0.1', '0.0.2', '0.0.3', '1.0.0' ] ]
+144 silly addNamed wordwrap@0.0.3
+145 verbose addNamed "0.0.3" is a plain semver version for wordwrap
+146 silly cache afterAdd wordwrap@0.0.3
+147 verbose afterAdd /Users/Betina/.npm/wordwrap/0.0.3/package/package.json not in flight; writing
+148 verbose correctMkdir /Users/Betina/.npm correctMkdir not in flight; initializing
+149 verbose afterAdd /Users/Betina/.npm/wordwrap/0.0.3/package/package.json written
+150 silly loadAllDepsIntoIdealTree Finishing
+151 silly loadIdealTree Finishing
+152 silly currentTree lib
+153 silly idealTree lib
+153 silly idealTree └─┬ import@0.0.6
+153 silly idealTree   ├── optimist@0.3.7
+153 silly idealTree   └── wordwrap@0.0.3
+154 silly generateActionsToTake Starting
+155 silly install generateActionsToTake
+156 silly generateActionsToTake Finishing
+157 silly diffTrees action count 3
+158 silly diffTrees add wordwrap@0.0.3
+159 silly diffTrees add optimist@0.3.7
+160 silly diffTrees add import@0.0.6
+161 silly decomposeActions action count 24
+162 silly decomposeActions fetch wordwrap@0.0.3
+163 silly decomposeActions extract wordwrap@0.0.3
+164 silly decomposeActions test wordwrap@0.0.3
+165 silly decomposeActions preinstall wordwrap@0.0.3
+166 silly decomposeActions build wordwrap@0.0.3
+167 silly decomposeActions install wordwrap@0.0.3
+168 silly decomposeActions postinstall wordwrap@0.0.3
+169 silly decomposeActions finalize wordwrap@0.0.3
+170 silly decomposeActions fetch optimist@0.3.7
+171 silly decomposeActions extract optimist@0.3.7
+172 silly decomposeActions test optimist@0.3.7
+173 silly decomposeActions preinstall optimist@0.3.7
+174 silly decomposeActions build optimist@0.3.7
+175 silly decomposeActions install optimist@0.3.7
+176 silly decomposeActions postinstall optimist@0.3.7
+177 silly decomposeActions finalize optimist@0.3.7
+178 silly decomposeActions fetch import@0.0.6
+179 silly decomposeActions extract import@0.0.6
+180 silly decomposeActions test import@0.0.6
+181 silly decomposeActions preinstall import@0.0.6
+182 silly decomposeActions build import@0.0.6
+183 silly decomposeActions install import@0.0.6
+184 silly decomposeActions postinstall import@0.0.6
+185 silly decomposeActions finalize import@0.0.6
+186 silly runTopLevelLifecycles Starting
+187 silly executeActions Starting
+188 silly install executeActions
+189 silly doSerial global-install 0
+190 silly doParallel fetch 3
+191 verbose correctMkdir /Users/Betina/.npm/_locks correctMkdir not in flight; initializing
+192 verbose lock using /Users/Betina/.npm/_locks/staging-3a08f0df5026584d.lock for /usr/local/lib/node_modules/.staging
+193 silly doParallel extract 3
+194 silly extract wordwrap@0.0.3
+195 silly extract optimist@0.3.7
+196 silly extract import@0.0.6
+197 verbose unbuild lib/node_modules/.staging/optimist-2b428266
+198 verbose unbuild lib/node_modules/.staging/wordwrap-29ecd651
+199 verbose unbuild lib/node_modules/.staging/import-44575e24
+200 silly gentlyRm /usr/local/lib/node_modules/.staging/optimist-2b428266 is being purged from base /usr/local
+201 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/.staging/optimist-2b428266
+202 silly gentlyRm /usr/local/lib/node_modules/.staging/wordwrap-29ecd651 is being purged from base /usr/local
+203 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/.staging/wordwrap-29ecd651
+204 verbose tar unpack /Users/Betina/.npm/optimist/0.3.7/package.tgz
+205 verbose tar unpacking to /usr/local/lib/node_modules/.staging/optimist-2b428266
+206 silly gentlyRm /usr/local/lib/node_modules/.staging/optimist-2b428266 is being purged
+207 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/.staging/optimist-2b428266
+208 verbose tar unpack /Users/Betina/.npm/wordwrap/0.0.3/package.tgz
+209 verbose tar unpacking to /usr/local/lib/node_modules/.staging/wordwrap-29ecd651
+210 silly gentlyRm /usr/local/lib/node_modules/.staging/wordwrap-29ecd651 is being purged
+211 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/.staging/wordwrap-29ecd651
+212 silly gunzTarPerm modes [ '755', '644' ]
+213 silly gunzTarPerm modes [ '755', '644' ]
+214 silly gentlyRm /usr/local/lib/node_modules/.staging/import-44575e24 is being purged from base /usr/local
+215 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/.staging/import-44575e24
+216 verbose tar unpack /Users/Betina/.npm/import/0.0.6/package.tgz
+217 verbose tar unpacking to /usr/local/lib/node_modules/.staging/import-44575e24
+218 silly gentlyRm /usr/local/lib/node_modules/.staging/import-44575e24 is being purged
+219 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/.staging/import-44575e24
+220 silly gunzTarPerm modes [ '755', '644' ]
+221 silly gunzTarPerm extractEntry package.json
+222 silly gunzTarPerm extractEntry package.json
+223 silly gunzTarPerm extractEntry package.json
+224 silly gunzTarPerm extractEntry LICENSE
+225 silly gunzTarPerm extractEntry index.js
+226 silly gunzTarPerm extractEntry LICENSE
+227 silly gunzTarPerm extractEntry index.js
+228 silly gunzTarPerm extractEntry .npmignore
+229 silly gunzTarPerm extractEntry README.md
+230 silly gunzTarPerm extractEntry example/line_count_options.js
+231 silly gunzTarPerm extractEntry README.markdown
+232 silly gunzTarPerm extractEntry example/center.js
+233 silly gunzTarPerm extractEntry LICENSE
+234 silly gunzTarPerm extractEntry index.js
+235 silly gunzTarPerm extractEntry example/boolean_double.js
+236 silly gunzTarPerm extractEntry example/divide.js
+237 silly gunzTarPerm extractEntry example/meat.js
+238 silly gunzTarPerm extractEntry test/break.js
+239 silly gunzTarPerm extractEntry import
+240 silly gunzTarPerm extractEntry test/expandFile-test.js
+241 silly gunzTarPerm extractEntry example/nonopt.js
+242 silly gunzTarPerm extractEntry example/string.js
+243 silly gunzTarPerm extractEntry test/wrap.js
+244 silly gunzTarPerm extractEntry test/idleness.txt
+245 silly gunzTarPerm extractEntry test/load-test.js
+246 silly gunzTarPerm extractEntry test/readAllImports-test.js
+247 silly gunzTarPerm extractEntry test/readGraph-test.js
+248 silly gunzTarPerm extractEntry example/default_hash.js
+249 silly gunzTarPerm extractEntry example/reflect.js
+250 silly gunzTarPerm extractEntry example/default_singles.js
+251 silly gunzTarPerm extractEntry example/usage-options.js
+252 silly gunzTarPerm extractEntry test/readImports-test.js
+253 silly gunzTarPerm extractEntry test/smash-test.js
+254 silly gunzTarPerm extractEntry example/bool.js
+255 silly gunzTarPerm extractEntry example/short.js
+256 silly gunzTarPerm extractEntry test/data/bar.js
+257 silly gunzTarPerm extractEntry test/data/imports-foo-bar-baz-expected.js
+258 silly gunzTarPerm extractEntry example/xup.js
+259 silly gunzTarPerm extractEntry example/boolean_single.js
+260 silly gunzTarPerm extractEntry test/data/imports-foo-bar-baz.js
+261 silly gunzTarPerm extractEntry test/data/imports-foo-expected.js
+262 silly gunzTarPerm extractEntry example/line_count_wrap.js
+263 silly gunzTarPerm extractEntry example/line_count.js
+264 silly gunzTarPerm extractEntry test/data/imports-circular-foo.js
+265 silly gunzTarPerm extractEntry test/data/imports-foo-foo-bar-foo.js
+266 silly gunzTarPerm extractEntry readme.markdown
+267 silly gunzTarPerm extractEntry test/parse.js
+268 silly gunzTarPerm extractEntry test/data/imports-foo.js
+269 silly gunzTarPerm extractEntry test/data/imports-imports-foo-expected.js
+270 silly gunzTarPerm extractEntry test/_.js
+271 silly gunzTarPerm extractEntry test/usage.js
+272 silly gunzTarPerm extractEntry test/data/imports-imports-foo.js
+273 silly gunzTarPerm extractEntry test/data/imports-index.js
+274 silly gunzTarPerm extractEntry test/_/bin.js
+275 silly gunzTarPerm extractEntry test/_/argv.js
+276 silly gunzTarPerm extractEntry test/data/imports-circular-foo-expected.js
+277 silly gunzTarPerm extractEntry test/data/imports-not-found.js
+278 silly gunzTarPerm extractEntry .travis.yml
+279 silly gunzTarPerm extractEntry test/data/imports-circular-bar.js
+280 silly gunzTarPerm extractEntry test/data/imports-self.js
+281 silly gentlyRm /usr/local/lib/node_modules/.staging/wordwrap-29ecd651/node_modules is being purged
+282 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/.staging/wordwrap-29ecd651/node_modules
+283 silly gunzTarPerm extractEntry test/data/import-empty-lines.js
+284 silly gunzTarPerm extractEntry test/data/index.js
+285 silly gunzTarPerm extractEntry test/data/forty-two.js
+286 silly gunzTarPerm extractEntry test/data/invalid-import-syntax.js
+287 silly gunzTarPerm extractEntry test/data/foo.js
+288 silly gunzTarPerm extractEntry test/data/not-commented-import-expected.js
+289 silly gunzTarPerm extractEntry test/data/empty-lines.js
+290 silly gunzTarPerm extractEntry test/data/not-commented-import.js
+291 silly gunzTarPerm extractEntry test/data/commented-import.js
+292 silly gunzTarPerm extractEntry test/data/trailing-comment-import-expected.js
+293 silly gunzTarPerm extractEntry test/data/baz.js
+294 silly gunzTarPerm extractEntry test/data/trailing-comment-import.js
+295 silly gunzTarPerm extractEntry test/data/imports-foo-foo-bar-foo-expected.js
+296 silly gunzTarPerm extractEntry test/data1/bar.js
+297 silly gunzTarPerm extractEntry test/data1/baz.js
+298 silly gunzTarPerm extractEntry test/data1/foo.js
+299 silly gentlyRm /usr/local/lib/node_modules/.staging/optimist-2b428266/node_modules is being purged
+300 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/.staging/optimist-2b428266/node_modules
+301 silly gentlyRm /usr/local/lib/node_modules/.staging/import-44575e24/node_modules is being purged
+302 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/.staging/import-44575e24/node_modules
+303 silly doParallel preinstall 3
+304 silly preinstall wordwrap@0.0.3 /usr/local/lib/node_modules/.staging/wordwrap-29ecd651
+305 info lifecycle wordwrap@0.0.3~preinstall: wordwrap@0.0.3
+306 silly preinstall optimist@0.3.7 /usr/local/lib/node_modules/.staging/optimist-2b428266
+307 info lifecycle optimist@0.3.7~preinstall: optimist@0.3.7
+308 silly preinstall import@0.0.6 /usr/local/lib/node_modules/.staging/import-44575e24
+309 info lifecycle import@0.0.6~preinstall: import@0.0.6
+310 silly lifecycle wordwrap@0.0.3~preinstall: no script for preinstall, continuing
+311 silly lifecycle optimist@0.3.7~preinstall: no script for preinstall, continuing
+312 silly lifecycle import@0.0.6~preinstall: no script for preinstall, continuing
+313 silly doReverseSerial remove 0
+314 silly doSerial move 0
+315 silly doSerial finalize 3
+316 silly finalize /usr/local/lib/node_modules/import/node_modules/wordwrap
+317 silly finalize /usr/local/lib/node_modules/import/node_modules/optimist
+318 silly finalize /usr/local/lib/node_modules/import
+319 silly doSerial build 3
+320 silly build wordwrap@0.0.3
+321 info linkStuff wordwrap@0.0.3
+322 silly linkStuff wordwrap@0.0.3 has /usr/local/lib/node_modules/import/node_modules as its parent node_modules
+323 silly linkStuff wordwrap@0.0.3 is part of a global install
+324 silly linkStuff wordwrap@0.0.3 is installed into a global node_modules
+325 verbose linkBins wordwrap@0.0.3
+326 verbose linkMans wordwrap@0.0.3
+327 silly build optimist@0.3.7
+328 info linkStuff optimist@0.3.7
+329 silly linkStuff optimist@0.3.7 has /usr/local/lib/node_modules/import/node_modules as its parent node_modules
+330 silly linkStuff optimist@0.3.7 is part of a global install
+331 silly linkStuff optimist@0.3.7 is installed into a global node_modules
+332 verbose linkBins optimist@0.3.7
+333 verbose linkMans optimist@0.3.7
+334 silly build import@0.0.6
+335 info linkStuff import@0.0.6
+336 silly linkStuff import@0.0.6 has /usr/local/lib/node_modules as its parent node_modules
+337 silly linkStuff import@0.0.6 is part of a global install
+338 silly linkStuff import@0.0.6 is installed into a global node_modules
+339 silly linkStuff import@0.0.6 is installed into the top-level global node_modules
+340 verbose linkBins import@0.0.6
+341 verbose link bins [ { import: 'import' }, '/usr/local/bin', true ]
+342 verbose linkMans import@0.0.6
+343 silly gentlyRm /usr/local/bin/import is being gently removed
+344 verbose unlock done using /Users/Betina/.npm/_locks/staging-3a08f0df5026584d.lock for /usr/local/lib/node_modules/.staging
+345 silly rollbackFailedOptional Starting
+346 silly rollbackFailedOptional Finishing
+347 silly runTopLevelLifecycles Finishing
+348 silly install printInstalled
+349 verbose stack Error: EACCES: permission denied, symlink '../lib/node_modules/import/import' -> '/usr/local/bin/import'
+349 verbose stack     at Error (native)
+350 verbose cwd /Users/Betina/Sites/JamCanvas
+351 error Darwin 14.5.0
+352 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "import" "-g"
+353 error node v6.9.1
+354 error npm  v3.10.8
+355 error path ../lib/node_modules/import/import
+356 error code EACCES
+357 error errno -13
+358 error syscall symlink
+359 error Error: EACCES: permission denied, symlink '../lib/node_modules/import/import' -> '/usr/local/bin/import'
+359 error     at Error (native)
+359 error  { Error: EACCES: permission denied, symlink '../lib/node_modules/import/import' -> '/usr/local/bin/import'
+359 error     at Error (native)
+359 error   errno: -13,
+359 error   code: 'EACCES',
+359 error   syscall: 'symlink',
+359 error   path: '../lib/node_modules/import/import',
+359 error   dest: '/usr/local/bin/import' }
+360 error Please try running this command again as root/Administrator.
+361 verbose exit [ -13, true ]
