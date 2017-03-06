@@ -36,6 +36,12 @@
     .windows .window-container .window-row {
       text-align: center; }
 
+.building0{
+  position: absolute;
+  bottom: 0;
+  left: 5px;
+  height: 50%;
+  width: 100px;}
 .building0 .block0 {
   width: 100%;
   height: 70%; }
@@ -60,6 +66,53 @@
   border-right: 12px solid transparent !important;
   border-bottom: 30px solid #c8ccce; }
 
+.building1{
+  position: absolute;
+  bottom: 0;
+  left: 100px;
+  height: 30%;
+  width: 80px;}
+ .building1 .block0 {
+  width: 100%;
+  height: 70%; }
+.building1 .block1 {
+  width: 80%;
+  height: 80%; }
+.building1 .block2 {
+  width: 60%;
+  height: 85%; }
+.building1 .block3 {
+  width: 40%;
+  height: 90%; }
+.building1 .block4 {
+  width: 0;
+  height: 0;
+  position: absolute;
+  bottom: 0;
+  left: 50%;}
+  
+ .building2{
+  position: absolute;
+  bottom: 0;
+  left: 180px;
+  height: 70%;
+  width: 120px;}
+.building2 .block0 {
+  width: 100%;
+  height: 70%; }
+.building2 .block1 {
+  width: 80%;
+  height: 80%; }
+.building2 .block2 {
+  width: 60%;
+  height: 85%; }
+.building2 .block3 {
+  width: 40%;
+  height: 90%; }
+}
+  
+  
+  
 #startPage {
   background-color: #000000;
   color: #FFFFFF;
