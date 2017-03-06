@@ -136,8 +136,9 @@ function visualize() {
     draw();
 
   } else if(visualSetting == "frequencybars") {
-    analyser.fftSize = 256;
-    var bufferLength = analyser.frequencyBinCount;
+  	var count = 0; // Just for debugging. ****REMOVE BEFORE PROD****
+    analyser.fftSize = 256; // Change number of bars 
+    var bufferLength = analyser.frequencyBinCount; // Actual number of bin sets
     console.log(bufferLength);
     var dataArray = new Uint8Array(bufferLength);
 
@@ -154,6 +155,14 @@ function visualize() {
       var barWidth = (WIDTH / bufferLength) * 2.5;
       var barHeight;
       var x = 0;
+
+      // Just for printing values. ******REMOVE BEFORE PROD********
+      if(count == 50){ //Change this to slow down. Higher the slower
+      	console.log(dataArray[0], dataArray[10], dataArray[20]);
+      	count = 0;
+      }else
+      	count++;
+
 
       for(var i = 0; i < bufferLength; i++) {
         barHeight = dataArray[i];
