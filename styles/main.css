@@ -4,8 +4,8 @@
   cursor: pointer; }
 
 .building {
-  position: relative;
-  display: inline-block;
+  position: absolute;
+  right: 0;
   bottom: 0;
   height: 50%;
   width: 100px; }
@@ -106,9 +106,10 @@
   display: none; }
 #canvasPage #liveNoiseFactory {
   height: 30%;
+  width: 100%;
   position: absolute;
   bottom: 0;
-  white-space: nowrap; }
+  right: 0; }
 
 body {
   width: 100%;

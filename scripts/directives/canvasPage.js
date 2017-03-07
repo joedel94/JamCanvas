@@ -62,8 +62,8 @@ var renderAnimation = {
     $("#liveNoiseFactory").append(scaffolding);
 
     scaffolding = $("#liveNoiseFactory .in-construction");
-    TweenMax.set(scaffolding, {x: 0});
-    TweenMax.to(scaffolding, 2, {x: -300, onStart: renderAnimation.endConstruction(scaffolding)});
+    TweenMax.set(scaffolding, {right: 0});
+    TweenMax.to(scaffolding, 2, {right: '100%', onStart: renderAnimation.endConstruction(scaffolding)});
   }
 }
 
