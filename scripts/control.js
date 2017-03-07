@@ -5,6 +5,8 @@ var pages = {
 	2: "canvasPage"
 }
 
+
+
 $(document).ready(function() {
 	changePage(currentPage);
 });

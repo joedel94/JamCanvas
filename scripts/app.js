@@ -156,9 +156,11 @@ function visualize() {
       var barHeight;
       var x = 0;
 
-      // Just for printing values. ******REMOVE BEFORE PROD********
-      if(count == 50){ //Change this to slow down. Higher the slower
-      	console.log(dataArray[0], dataArray[10], dataArray[20]);
+      if(count == 50){ //change eventually to reflect BPM of loaded song
+
+      	renderAnimation.renderLiveBuilding(dataArray[10]); //sends render the med frequencies
+        //dataArray[0] for low frequ, dataArray[20] for high freq
+      	
       	count = 0;
       }else
       	count++;
