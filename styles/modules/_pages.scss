@@ -47,6 +47,7 @@
 }
 
 #canvasPage {
+	@include cover;
 	.mic-demo {
 		display: none;
 	}
@@ -60,4 +61,7 @@
 
 }
 
+	#models {
+		opacity: 0;
+	}
 

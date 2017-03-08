@@ -38,17 +38,21 @@
 
 .building0 .block0 {
   width: 100%;
+  height: 100%; }
+
+.building1 .block0 {
+  width: 100%;
   height: 70%; }
-.building0 .block1 {
+.building1 .block1 {
   width: 80%;
   height: 80%; }
-.building0 .block2 {
+.building1 .block2 {
   width: 60%;
   height: 85%; }
-.building0 .block3 {
+.building1 .block3 {
   width: 40%;
   height: 90%; }
-.building0 .block4 {
+.building1 .block4 {
   width: 0;
   height: 0;
   position: absolute;
@@ -102,14 +106,21 @@
       padding: 10px 0;
       text-align: center; }
 
-#canvasPage .mic-demo {
-  display: none; }
-#canvasPage #liveNoiseFactory {
-  height: 30%;
+#canvasPage {
   width: 100%;
-  position: absolute;
-  bottom: 0;
-  right: 0; }
+  height: 100%;
+  display: block; }
+  #canvasPage .mic-demo {
+    display: none; }
+  #canvasPage #liveNoiseFactory {
+    height: 30%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0; }
+
+#models {
+  opacity: 0; }
 
 body {
   width: 100%;
