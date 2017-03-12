@@ -1,12 +1,21 @@
 .btn {
   display: inline-block;
   padding: 10px 15px;
-  cursor: pointer; }
+  cursor: pointer;
+  font-family: Verdana, Geneva, sans-serif;}
+  
+  
+ .fileBtn {
+  display: inline-block;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-family: Verdana, Geneva, sans-serif;
+  }
 
 .building {
   position: absolute;
-  right: 0;
   bottom: 0;
+  left: 5px;
   height: 50%;
   width: 100px; }
   .building .block {
@@ -36,11 +45,43 @@
     .windows .window-container .window-row {
       text-align: center; }
 
+.building0{
+  position: absolute;
+  bottom: 0;
+  left: 5px;
+  height: 50%;
+  width: 100px;}
 .building0 .block0 {
   width: 100%;
-  height: 100%; }
+  height: 70%; }
+.building0 .block1 {
+  width: 80%;
+  height: 80%; }
+.building0 .block2 {
+  width: 60%;
+  height: 85%; }
+.building0 .block3 {
+  width: 40%;
+  height: 90%; }
+.building0 .block4 {
+  width: 0;
+  height: 0;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 90%;
+  border-left: 12px solid transparent !important;
+  border-right: 12px solid transparent !important;
+  border-bottom: 30px solid #c8ccce; }
 
-.building1 .block0 {
+.building1{
+  position: absolute;
+  bottom: 0;
+  left: 100px;
+  height: 30%;
+  width: 80px;}
+ .building1 .block0 {
   width: 100%;
   height: 70%; }
 .building1 .block1 {
@@ -57,31 +98,53 @@
   height: 0;
   position: absolute;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 90%;
-  border-left: 12px solid transparent !important;
-  border-right: 12px solid transparent !important;
-  border-bottom: 30px solid #c8ccce; }
-
-#startPage {
-  background-color: #000000;
+  left: 50%;}
+  
+ .building2{
+  position: absolute;
+  bottom: 0;
+  left: 180px;
+  height: 70%;
+  width: 120px;}
+.building2 .block0 {
+  width: 100%;
+  height: 70%; }
+.building2 .block1 {
+  width: 80%;
+  height: 80%; }
+.building2 .block2 {
+  width: 60%;
+  height: 85%; }
+.building2 .block3 {
+  width: 40%;
+  height: 90%; }
+}
+  
+  
+  
+#startPage{
+  font-family: Verdana, Geneva, sans-serif;
+  background-color: #eeeeeee;
   color: #FFFFFF;
   width: 100%;
   height: 100%;
   display: block; }
   #startPage .titles {
-    position: absolute;
+    font-family: Verdana, Geneva, sans-serif;
+	position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     text-align: center; }
     #startPage .titles .btn {
-      background-color: #c61111; }
+	  font-family: Verdana, Geneva, sans-serif;
+      background-color: #04a2e0;
+	  color: #FFFFFF;}
 
+#selectPage{	  
+	font-family: Verdana, Geneva, sans-serif;}
 #selectPage .playlist {
   background-color: #FFFFFF;
-  width: 40%;
   float: left;
   height: 100%; }
 #selectPage .action-wrapper {
@@ -91,36 +154,30 @@
   width: auto;
   position: relative; }
   #selectPage .action-wrapper .demo-img {
-    background-color: #000000;
+    background-color: #aaaaaa;
     width: 70%;
     height: 40%;
     margin: 40px auto; }
   #selectPage .action-wrapper .action-buttons {
-    width: 200px;
-    margin: auto; }
+    width: 240px;
+    margin: auto;}
     #selectPage .action-wrapper .action-buttons .btn {
       background-color: #04a2e0;
-      margin: 30px auto;
+      margin: 20px auto;
       color: #FFFFFF;
       width: 100%;
-      padding: 10px 0;
+      padding: 10px 0px;
       text-align: center; }
 
-#canvasPage {
-  width: 100%;
-  height: 100%;
-  display: block; }
-  #canvasPage .mic-demo {
-    display: none; }
-  #canvasPage #liveNoiseFactory {
-    height: 30%;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    right: 0; }
-
-#models {
-  opacity: 0; }
+#canvasPage{
+	font-family: Verdana, Geneva, sans-serif;
+	}
+	#canvasPage .mic-demo {
+		display: none;}
+		#canvasPage .btn {
+			background-color: #04a2e0;
+			color: #FFFFFF}
+  
 
 body {
   width: 100%;
