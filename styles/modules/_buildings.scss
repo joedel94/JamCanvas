@@ -3,7 +3,7 @@
 	position: absolute;
 	right: 0;
 	bottom: 0;
-	height: 50%; //temporary
+	height: 100%;
 	width: 100px; //temporary
 
 	.block {
@@ -78,4 +78,15 @@
 		border-bottom: 30px solid $c-grey; //will get overwritten		
 	}
 
+}
+
+.building2 {
+	.block0 {
+		width: 100%;
+		height: 80%;
+	}
+	.block1 {
+		width: 100%;
+		height: 80%;
+	}
 }
