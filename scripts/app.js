@@ -139,7 +139,6 @@ function visualize() {
     var count = 0; // Just for debugging. ****REMOVE BEFORE PROD****
     analyser.fftSize = 256; // Change number of bars 
     var bufferLength = analyser.frequencyBinCount; // Actual number of bin sets
-    console.log(bufferLength);
     var dataArray = new Uint8Array(bufferLength);
 
     canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);

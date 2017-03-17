@@ -1,8 +1,7 @@
-<script src="scripts/app.js"></script>
 <div id="canvasPage">
 	<button onclick="$('.mic-demo').toggle()">Mic Demo</button>
-	
 
+	<div id="skyFactory" class="factory"></div>	
 	<div id="liveNoiseFactory" class="factory"></div>
 	<div id="highFreqFactory" class="factory"></div>
 	<div id="medFreqFactory" class="factory"></div>
@@ -37,7 +36,20 @@
 	</div>
 
 	<div class="building high-frequency building2">
+		<div class="block block4"></div>
+		<div class="block block3"></div>
+		<div class="block block2"></div>
 		<div class="block block1"></div>
-		<div class="block block0  windows"></div>
+		<div class="block block0 windows"></div>
 	</div>
+
+	<svg viewBox='0 0 105 105'>
+		<path d='M 25,60 
+			a 20,20 1 0,0 0,40 
+			h 50 
+			a 20,20 1 0,0 0,-40 
+			a 10,10 1 0,0 -15,-10 
+			a 15,15 1 0,0 -35,10  
+			z' />
+	</svg>
 </div>

@@ -19,17 +19,17 @@
   .building.live-noise .shape {
     border-color: #000000; }
   .building.high-frequency .block {
-    background: #1a1a1a; }
-  .building.high-frequency .shape {
-    border-color: #1a1a1a; }
-  .building.med-frequency .block {
     background: #333333; }
-  .building.med-frequency .shape {
+  .building.high-frequency .shape {
     border-color: #333333; }
+  .building.med-frequency .block {
+    background: #595959; }
+  .building.med-frequency .shape {
+    border-color: #595959; }
   .building.low-frequency .block {
-    background: #4d4d4d; }
+    background: gray; }
   .building.low-frequency .shape {
-    border-color: #4d4d4d; }
+    border-color: gray; }
 
 .window {
   background: #c8ccce;
@@ -76,10 +76,19 @@
 
 .building2 .block0 {
   width: 100%;
-  height: 80%; }
+  height: 20%; }
 .building2 .block1 {
-  width: 100%;
+  width: 80%;
+  height: 30%; }
+.building2 .block2 {
+  width: 50%;
   height: 80%; }
+.building2 .block3 {
+  width: 20%;
+  height: 90%; }
+.building2 .block4 {
+  width: 2px;
+  height: 100%; }
 
 #startPage {
   background-color: #000000;
@@ -135,7 +144,10 @@
     bottom: 0;
     right: 0; }
     #canvasPage .factory#skyFactory {
-      z-index: 0; }
+      z-index: 0;
+      height: 60%;
+      top: 0;
+      bottom: initial; }
     #canvasPage .factory#highFreqFactory {
       height: 70%;
       z-index: 3; }
@@ -146,11 +158,12 @@
       height: 50%;
       z-index: 1; }
     #canvasPage .factory#liveNoiseFactory {
-      height: 20%;
+      height: 40%;
       z-index: 4; }
 
 #models {
-  opacity: 0; }
+  opacity: 0;
+  z-index: 10; }
 
 body {
   width: 100%;

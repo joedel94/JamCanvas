@@ -58,6 +58,9 @@
 		right: 0;
 		&#skyFactory {
 			z-index: 0;
+			height: 60%;
+			top: 0;
+			bottom: initial;
 		}
 		&#highFreqFactory {
 			height: 70%;
@@ -72,7 +75,7 @@
 			z-index: 1;
 		}
 		&#liveNoiseFactory {
-			height: 20%;
+			height: 40%;
 			z-index: 4;
 		}	
 	}
@@ -80,6 +83,7 @@
 }
 
 #models {
-	opacity: 0;
+	opacity: 0; //change to opacity 0 for live
+	z-index: 10;
 }
 

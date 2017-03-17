@@ -20,26 +20,26 @@
 	}
 	&.high-frequency {
 		.block {
-			background: lighten($c-black, 10%);
-		}
-		.shape {
-			border-color: lighten($c-black, 10%);
-		}
-	}
-	&.med-frequency {
-		.block {
 			background: lighten($c-black, 20%);
 		}
 		.shape {
 			border-color: lighten($c-black, 20%);
 		}
 	}
-	&.low-frequency {
+	&.med-frequency {
 		.block {
-			background: lighten($c-black, 30%);
+			background: lighten($c-black, 35%);
 		}
 		.shape {
-			border-color: lighten($c-black, 30%);
+			border-color: lighten($c-black, 35%);
+		}
+	}
+	&.low-frequency {
+		.block {
+			background: lighten($c-black, 50%);
+		}
+		.shape {
+			border-color: lighten($c-black, 50%);
 		}
 	}
 }
@@ -102,10 +102,22 @@
 .building2 {
 	.block0 {
 		width: 100%;
-		height: 80%;
+		height: 20%;
 	}
 	.block1 {
-		width: 100%;
+		width: 80%;
+		height: 30%;
+	}
+	.block2 {
+		width: 50%;
 		height: 80%;
+	}
+	.block3 {
+		width: 20%;
+		height: 90%;
+	}
+	.block4 {
+		width: 2px;
+		height: 100%;
 	}
 }
