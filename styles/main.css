@@ -14,12 +14,22 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-50%); }
-  .building.high-frequency .block {
+  .building.live-noise .block {
     background: #000000; }
-  .building.high-frequency .shape {
+  .building.live-noise .shape {
     border-color: #000000; }
+  .building.high-frequency .block {
+    background: #1a1a1a; }
+  .building.high-frequency .shape {
+    border-color: #1a1a1a; }
   .building.med-frequency .block {
-    background: #c8ccce; }
+    background: #333333; }
+  .building.med-frequency .shape {
+    border-color: #333333; }
+  .building.low-frequency .block {
+    background: #4d4d4d; }
+  .building.low-frequency .shape {
+    border-color: #4d4d4d; }
 
 .window {
   background: #c8ccce;
@@ -119,12 +129,25 @@
   display: block; }
   #canvasPage .mic-demo {
     display: none; }
-  #canvasPage #liveNoiseFactory {
-    height: 30%;
+  #canvasPage .factory {
     width: 100%;
     position: absolute;
     bottom: 0;
     right: 0; }
+    #canvasPage .factory#skyFactory {
+      z-index: 0; }
+    #canvasPage .factory#highFreqFactory {
+      height: 70%;
+      z-index: 3; }
+    #canvasPage .factory#medFreqFactory {
+      height: 60%;
+      z-index: 2; }
+    #canvasPage .factory#lowFreqFactory {
+      height: 50%;
+      z-index: 1; }
+    #canvasPage .factory#liveNoiseFactory {
+      height: 20%;
+      z-index: 4; }
 
 #models {
   opacity: 0; }

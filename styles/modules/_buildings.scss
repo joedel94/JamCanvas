@@ -10,7 +10,7 @@
 		@include middle;
 	}
 
-	&.high-frequency {
+	&.live-noise {
 		.block {
 			background: $c-black;		
 		}
@@ -18,9 +18,28 @@
 			border-color: $c-black;
 		}
 	}
+	&.high-frequency {
+		.block {
+			background: lighten($c-black, 10%);
+		}
+		.shape {
+			border-color: lighten($c-black, 10%);
+		}
+	}
 	&.med-frequency {
 		.block {
-			background: $c-grey;
+			background: lighten($c-black, 20%);
+		}
+		.shape {
+			border-color: lighten($c-black, 20%);
+		}
+	}
+	&.low-frequency {
+		.block {
+			background: lighten($c-black, 30%);
+		}
+		.shape {
+			border-color: lighten($c-black, 30%);
 		}
 	}
 }

@@ -37,9 +37,9 @@ var buildings = [
 ]
 
 var renderAnimation = {
-	maxLowFrequency: 100, //dictate 100% height for each level
-	maxMedFrequency: 200,
-	maxHighFrequency: 300,
+	maxLowFrequency: 100.00, //dictate 100% height for each level
+	maxMedFrequency: 200.00,
+	maxHighFrequency: 300.00,
 	buildings: [],
 
 	init: function() {
@@ -60,14 +60,69 @@ var renderAnimation = {
 		$(element).remove();
 	},
 	renderLiveBuilding: function(frequency) {
-		var scaffolding = this.selectBuilding().addClass('high-frequency in-construction');
+		var scaffolding = this.selectBuilding().addClass('live-noise in-construction');
 		$("#liveNoiseFactory").append(scaffolding);
 
 		scaffolding = $("#liveNoiseFactory .in-construction");
 		var finishedBuilding = $("#liveNoiseFactory .animating");
 
 		var t = 5; //calculate using BPM
-		TweenMax.set(scaffolding, {right: 0});
+		var buildingHeight = (frequency / this.maxMedFrequency) * 100;
+		TweenMax.set(scaffolding, {right: 0, height: buildingHeight + "%"});
+		TweenMax.to(scaffolding, t, {
+			right: '100%',
+			onStart: this.endConstruction(scaffolding),
+			ease: Power0.easeNone
+		});
+
+		TweenMax.delayedCall(t, function() { renderAnimation.demolishBuilding(finishedBuilding)});
+	},
+	renderHighFreqBuilding: function(frequency) {
+		var scaffolding = this.selectBuilding().addClass('high-frequency in-construction');
+		$("#highFreqFactory").append(scaffolding);
+
+		scaffolding = $("#highFreqFactory .in-construction");
+		var finishedBuilding = $("#highFreqFactory .animating");
+
+		var t = 7; //calculate using BPM
+		var buildingHeight = (frequency / this.maxHighFrequency) * 100;
+		TweenMax.set(scaffolding, {right: 0, height: buildingHeight + "%"});
+		TweenMax.to(scaffolding, t, {
+			right: '100%',
+			onStart: this.endConstruction(scaffolding),
+			ease: Power0.easeNone
+		});
+
+		TweenMax.delayedCall(t, function() { renderAnimation.demolishBuilding(finishedBuilding)});
+	},
+	renderMedFreqBuilding: function(frequency) {
+		var scaffolding = this.selectBuilding().addClass('med-frequency in-construction');
+		$("#medFreqFactory").append(scaffolding);
+
+		scaffolding = $("#medFreqFactory .in-construction");
+		var finishedBuilding = $("#medFreqFactory .animating");
+
+		var t = 10; //calculate using BPM
+		var buildingHeight = (frequency / this.maxMedFrequency) * 100;
+		TweenMax.set(scaffolding, {right: 0, height: buildingHeight + "%"});
+		TweenMax.to(scaffolding, t, {
+			right: '100%',
+			onStart: this.endConstruction(scaffolding),
+			ease: Power0.easeNone
+		});
+
+		TweenMax.delayedCall(t, function() { renderAnimation.demolishBuilding(finishedBuilding)});
+	},
+	renderLowFreqBuilding: function(frequency) {
+		var scaffolding = this.selectBuilding().addClass('low-frequency in-construction');
+		$("#lowFreqFactory").append(scaffolding);
+
+		scaffolding = $("#lowFreqFactory .in-construction");
+		var finishedBuilding = $("#lowFreqFactory .animating");
+
+		var t = 12; //calculate using BPM
+		var buildingHeight = (frequency / this.maxLowFrequency) * 100;
+		TweenMax.set(scaffolding, {right: 0, height: buildingHeight + "%"});
 		TweenMax.to(scaffolding, t, {
 			right: '100%',
 			onStart: this.endConstruction(scaffolding),

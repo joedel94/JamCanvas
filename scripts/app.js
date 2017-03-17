@@ -61,7 +61,7 @@ if (navigator.getUserMedia) {
          source.connect(analyser);
          analyser.connect(waveShaper);
 
-      	 visualize();
+         visualize();
       },
 
       // Error callback
@@ -116,7 +116,7 @@ function visualize() {
         if(freqDataArray[i]>140){
           canvasCtx.strokeStyle = 'rgb(' + (freqDataArray[i]+50) + ',100,100)';
           if(freqDataArray[i]>150){
-		      canvasCtx.strokeStyle = 'rgb(' + (freqDataArray[i]+100) + ',50,50)'; 
+          canvasCtx.strokeStyle = 'rgb(' + (freqDataArray[i]+100) + ',50,50)'; 
           }
         }
 
@@ -136,7 +136,7 @@ function visualize() {
     draw();
 
   } else if(visualSetting == "frequencybars") {
-  	var count = 0; // Just for debugging. ****REMOVE BEFORE PROD****
+    var count = 0; // Just for debugging. ****REMOVE BEFORE PROD****
     analyser.fftSize = 256; // Change number of bars 
     var bufferLength = analyser.frequencyBinCount; // Actual number of bin sets
     console.log(bufferLength);
@@ -158,12 +158,16 @@ function visualize() {
 
       if(count == 50){ //change eventually to reflect BPM of loaded song
 
-      	renderAnimation.renderLiveBuilding(dataArray[10]); //sends render the med frequencies
+        //console.log(dataArray);
+        renderAnimation.renderLiveBuilding(dataArray[10]); //sends render the med frequencies
+        renderAnimation.renderHighFreqBuilding(dataArray[20]); //temp, move to actual song render
+        renderAnimation.renderMedFreqBuilding(dataArray[10]); //temp, move to actual song render
+        renderAnimation.renderLowFreqBuilding(dataArray[0]);
         //dataArray[0] for low frequ, dataArray[20] for high freq
-      	
-      	count = 0;
+        
+        count = 0;
       }else
-      	count++;
+        count++;
 
 
       for(var i = 0; i < bufferLength; i++) {
@@ -190,6 +194,3 @@ visualSelect.onchange = function() {
   window.cancelAnimationFrame(drawVisual);
   visualize();
 }
-
-
-
