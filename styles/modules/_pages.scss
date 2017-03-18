@@ -1,20 +1,26 @@
 #startPage {
-	background-color: $c-black;
-	color: $c-white;
+	background-color: $c-light-grey;
+	color: $c-black;
+	font-family: Verdana, Geneva, sans-serif;
 	@include cover;
 
 	.titles {
 		@include center;
 		text-align: center;
 		.btn {
-			background-color: $c-red;
+			background-color: $c-blue;
+			color: $c-white;
 		}
 	}
 }
 
-#selectPage {
+#selectPage { 
+	font-family: Verdana, Geneva, sans-serif;
+	.fileBtn{
+		padding: 5px 10px;
+	}
 	.playlist {
-		background-color: $c-white;
+		background-color: $c-grey;
 		width: 40%;
 		float: left;
 		height: 100%;
@@ -32,6 +38,7 @@
 			margin: 40px auto;
 		}
 		.action-buttons {
+			font-family: Verdana, Geneva, sans-serif;
 			width: 200px;
 			margin: auto;
 			.btn {
@@ -39,7 +46,7 @@
 				margin: 30px auto;
 				color: $c-white;
 				width: 100%;
-				padding: 10px 0;
+				padding: 10px 0px;
 				text-align: center;
 			}
 		}
@@ -47,43 +54,14 @@
 }
 
 #canvasPage {
-	@include cover;
+	font-family: Verdana, Geneva, sans-serif;
+	text-align: center;
+	.fileBtn{
+		padding: 5px 10px;
+	}
 	.mic-demo {
 		display: none;
 	}
-	.factory {
-		width: 100%;
-		position: absolute;
-		bottom: 0;
-		right: 0;
-		&#skyFactory {
-			z-index: 0;
-			height: 60%;
-			top: 0;
-			bottom: initial;
-		}
-		&#highFreqFactory {
-			height: 70%;
-			z-index: 3;
-		}
-		&#medFreqFactory {
-			height: 60%;
-			z-index: 2;
-		}
-		&#lowFreqFactory {
-			height: 50%;
-			z-index: 1;
-		}
-		&#liveNoiseFactory {
-			height: 40%;
-			z-index: 4;
-		}	
-	}
-
 }
 
-#models {
-	opacity: 0; //change to opacity 0 for live
-	z-index: 10;
-}
 
