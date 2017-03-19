@@ -60,7 +60,7 @@
 		display: none;
 	}
 	#sky {
-		width: 100%;
+		width: calc(100% + 200px);
 		position: absolute;
 		top: 0;
 		height:	60%;
