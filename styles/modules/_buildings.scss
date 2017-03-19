@@ -20,26 +20,26 @@
 	}
 	&.high-frequency {
 		.block {
-			background: lighten($c-black, 20%);
+			background: lighten($c-black, 25%);
 		}
 		.shape {
-			border-color: lighten($c-black, 20%);
+			border-color: lighten($c-black, 25%);
 		}
 	}
 	&.med-frequency {
 		.block {
-			background: lighten($c-black, 35%);
+			background: lighten($c-black, 45%);
 		}
 		.shape {
-			border-color: lighten($c-black, 35%);
+			border-color: lighten($c-black, 45%);
 		}
 	}
 	&.low-frequency {
 		.block {
-			background: lighten($c-black, 50%);
+			background: lighten($c-black, 60%);
 		}
 		.shape {
-			border-color: lighten($c-black, 50%);
+			border-color: lighten($c-black, 60%);
 		}
 	}
 }

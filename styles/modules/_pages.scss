@@ -55,17 +55,21 @@
 
 #canvasPage {
 	@include cover;
+	background: -moz-linear-gradient(top, $c-black, $c-light-grey);
 	.mic-demo {
 		display: none;
 	}
-	.factory {
+	.sky {
 		width: 100%;
 		position: absolute;
+		top: 0;
+		height:	60%;
+		z-index: 0;
+	}
+	.factory {
+		width: calc(100% + 100px);
+		position: absolute;
 		bottom: 0;
-		right: 0;
-		&#skyFactory {
-			z-index: 0;
-		}
 		&#highFreqFactory {
 			height: 70%;
 			z-index: 3;

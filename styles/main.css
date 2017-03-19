@@ -19,17 +19,17 @@
   .building.live-noise .shape {
     border-color: #000000; }
   .building.high-frequency .block {
-    background: #333333; }
+    background: #404040; }
   .building.high-frequency .shape {
-    border-color: #333333; }
+    border-color: #404040; }
   .building.med-frequency .block {
-    background: #595959; }
+    background: #737373; }
   .building.med-frequency .shape {
-    border-color: #595959; }
+    border-color: #737373; }
   .building.low-frequency .block {
-    background: gray; }
+    background: #999999; }
   .building.low-frequency .shape {
-    border-color: gray; }
+    border-color: #999999; }
 
 .window {
   background: #c8ccce;
@@ -142,16 +142,20 @@
 #canvasPage {
   width: 100%;
   height: 100%;
-  display: block; }
+  display: block;
+  background: -moz-linear-gradient(top, #000000, #efefef); }
   #canvasPage .mic-demo {
     display: none; }
-  #canvasPage .factory {
+  #canvasPage .sky {
     width: 100%;
     position: absolute;
-    bottom: 0;
-    right: 0; }
-    #canvasPage .factory#skyFactory {
-      z-index: 0; }
+    top: 0;
+    height: 60%;
+    z-index: 0; }
+  #canvasPage .factory {
+    width: calc(100% + 100px);
+    position: absolute;
+    bottom: 0; }
     #canvasPage .factory#highFreqFactory {
       height: 70%;
       z-index: 3; }
