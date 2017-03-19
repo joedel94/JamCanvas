@@ -27,9 +27,9 @@
   .building.med-frequency .shape {
     border-color: #737373; }
   .building.low-frequency .block {
-    background: #999999; }
+    background: #8c8c8c; }
   .building.low-frequency .shape {
-    border-color: #999999; }
+    border-color: #8c8c8c; }
 
 .window {
   background: #c8ccce;
@@ -146,12 +146,17 @@
   background: -moz-linear-gradient(top, #000000, #efefef); }
   #canvasPage .mic-demo {
     display: none; }
-  #canvasPage .sky {
+  #canvasPage #sky {
     width: 100%;
     position: absolute;
     top: 0;
     height: 60%;
     z-index: 0; }
+    #canvasPage #sky .item {
+      position: absolute;
+      fill: #FFFFFF;
+      top: 0;
+      right: 0; }
   #canvasPage .factory {
     width: calc(100% + 100px);
     position: absolute;

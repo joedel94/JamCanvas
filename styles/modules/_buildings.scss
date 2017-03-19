@@ -36,10 +36,10 @@
 	}
 	&.low-frequency {
 		.block {
-			background: lighten($c-black, 60%);
+			background: lighten($c-black, 55%);
 		}
 		.shape {
-			border-color: lighten($c-black, 60%);
+			border-color: lighten($c-black, 55%);
 		}
 	}
 }

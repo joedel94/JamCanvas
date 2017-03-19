@@ -1,37 +1,35 @@
-var skyItem = [
-	"<svg viewBox='0 0 105 105' class='item'><path d='M 25,60 a 20,20 1 0,0 0,40 h 50 a 20,20 1 0,0 0,-40 a 10,10 1 0,0 -15,-10 a 15,15 1 0,0 -35,10  z' /></svg>"
-]
+var cloud = "<svg viewBox='0 0 105 105' class='item'><path d='M 25,60 a 20,20 1 0,0 0,40 h 50 a 20,20 1 0,0 0,-40 a 10,10 1 0,0 -15,-10 a 15,15 1 0,0 -35,10  z' /></svg>";
 
 var skyAnimation = {
-	skyItem: [],
+	t_cloud: 20,
 
 	init: function() {
-
+		skyAnimation.renderSkyItem(cloud, skyAnimation.t_cloud);
+		setInterval(function() { skyAnimation.renderSkyItem(cloud, skyAnimation.t_cloud); }, this.t_cloud * 600);
 	},
-	selectSkyItem: function() {
-		var min = 0;
-		var max = skyItem.length - 1;
-		var rand = Math.floor(Math.random() * (max - min + 1)) + min;
-		return $($.parseHTML(skyItem[rand])); //maybe have preparsed buidings in the array		
+	endConstruction: function(element) {
+		$(element).removeClass("in-construction");
+		$(element).addClass("animating")
 	},
-	renderLiveBuilding: function(frequency) {
-		var item = this.selectSkyItem().addClass('in-construction');
-		$("#skyFactory").append(scaffolding);
+	removeSkyItem: function(element) {
+		$(element).remove();
+	},
+	renderSkyItem: function(itemString, t) {
+		var skyItem = $($.parseHTML(itemString)).addClass("in-construction");
+		$("#sky").append(skyItem);
 
-		item = $("#skyFactory .in-construction");
-		var finishedBuilding = $("#liveNoiseFactory .animating");
+		skyItem = $("#sky .in-construction");
+		var finishedItem = $("#sky .animating");
 
-		var t = 5; //calculate using BPM
-		var buildingHeight = (frequency / this.maxMedFrequency) * 100;
-		TweenMax.set(scaffolding, {right: 0, height: buildingHeight + "%"});
-		TweenMax.to(scaffolding, t, {
+		TweenMax.set(skyItem, {right: 0, height: '100px', width: 'auto'});
+		TweenMax.to(skyItem, t, {
 			right: '100%',
-			onStart: this.endConstruction(scaffolding),
+			onStart: this.endConstruction(skyItem),
 			ease: Power0.easeNone
 		});
 
-		TweenMax.delayedCall(t, function() { renderAnimation.demolishBuilding(finishedBuilding)});
-	},
+		TweenMax.delayedCall(t, function() { skyAnimation.removeSkyItem(finishedItem)});
+	}
 
 }
 

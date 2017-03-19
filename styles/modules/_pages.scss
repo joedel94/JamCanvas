@@ -59,12 +59,18 @@
 	.mic-demo {
 		display: none;
 	}
-	.sky {
+	#sky {
 		width: 100%;
 		position: absolute;
 		top: 0;
 		height:	60%;
 		z-index: 0;
+		.item {
+			position: absolute;
+			fill: $c-white;
+			top: 0;
+			right: 0;
+		}
 	}
 	.factory {
 		width: calc(100% + 100px);
