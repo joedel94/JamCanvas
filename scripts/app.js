@@ -1,3 +1,11 @@
+/* Music Fair Use Credit
+* Blind Love Dub by Jeris (c) copyright 2017 
+* Licensed under a Creative Commons Attribution (3.0) license. 
+* http://dig.ccmixter.org/files/VJ_Memes/55416 
+* Ft: Kara Square (mindmapthat)
+*/
+
+
 // fork getUserMedia for multiple browser versions, for those
 // that need prefixes
 
@@ -36,6 +44,42 @@ analyser.minDecibels = -90;
 analyser.maxDecibels = -10;
 analyser.smoothingTimeConstant = 0.85;
 
+// grab audio track via XHR for convolver node
+
+var soundSource, concertHallBuffer;
+
+ajaxRequest = new XMLHttpRequest();
+
+ajaxRequest.open('GET', 'audio/BlindLoveDub.mp3', true);
+
+ajaxRequest.responseType = 'arraybuffer';
+
+
+ajaxRequest.onload = function() {
+  var audioData = ajaxRequest.response;
+
+  audioCtx.decodeAudioData(audioData, function(buffer) {
+      console.log(buffer);
+      concertHallBuffer = buffer;
+      soundSource = audioCtx.createBufferSource();
+      console.log(soundSource);
+      soundSource.buffer = concertHallBuffer;
+      // Connects request to analyzer
+      soundSource.connect(analyser)
+
+      // Actually outputs the sound
+      soundSource.connect(audioCtx.destination);
+      soundSource.loop = true;
+      soundSource.start();
+      visualize();
+      voiceChange();
+    }, function(e){"Error with decoding audio data" + e.err});
+}
+
+ajaxRequest.send();
+
+
+
 // var intendedWidth = document.querySelector('.wrapper').clientWidth;
 
 // canvas.setAttribute('width',intendedWidth);
@@ -47,7 +91,7 @@ var drawVisual;
 
 //main block for doing the audio recording
 
-if (navigator.getUserMedia) {
+/*if (navigator.getUserMedia) {
    console.log('getUserMedia supported.');
    navigator.getUserMedia (
       // constraints - only audio needed for this app
@@ -71,7 +115,7 @@ if (navigator.getUserMedia) {
    );
 } else {
    console.log('getUserMedia not supported on your browser!');
-}
+}*/
 
 function visualize() {
   WIDTH = canvas.width;
@@ -157,7 +201,7 @@ function visualize() {
 
       if(count == 50){ //change eventually to reflect BPM of loaded song
 
-        //console.log(dataArray);
+        console.log(dataArray);
         renderAnimation.renderLiveBuilding(dataArray[10]); //sends render the med frequencies
         renderAnimation.renderHighFreqBuilding(dataArray[20]); //temp, move to actual song render
         renderAnimation.renderMedFreqBuilding(dataArray[10]); //temp, move to actual song render
