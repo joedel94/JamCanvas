@@ -1,8 +1,9 @@
 var buildings = [
 	'<div class="building building0"><div class="block block0 windows"></div></div>',
+	'<div class="building building0"><div class="block block0 windows"></div></div>',
 	'<div class="building building1"><div class="shape block4"></div><div class="block block3"></div><div class="block block2"></div><div class="block block1 windows"></div><div class="block block0"></div></div>',
-	'<div class="building building2"><div class="block block4"></div><div class="block block3"></div><div class="block block2"></div><div class="block block1"></div><div class="block block0 windows"></div></div>'
-
+	'<div class="building building2"><div class="block block4"></div><div class="block block3"></div><div class="block block2"></div><div class="block block1"></div><div class="block block0 windows"></div></div>',
+	'<div class="building building3"><div class="block block1"></div><div class="block block0 windows"></div></div>'
 ]
 
 var renderAnimation = {

@@ -12,6 +12,8 @@ $c-light-grey: #efefef;
 	width: 100%;
 	height: 100%;
 	display: block;
+	overflow: hidden;
+	position: absolute;
 }
 
 @mixin center { //vertical and horizontal

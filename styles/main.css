@@ -3,6 +3,10 @@
   padding: 10px 15px;
   cursor: pointer; }
 
+#models {
+  display: none;
+  opacity: 0; }
+
 .building {
   position: absolute;
   right: 0;
@@ -90,13 +94,22 @@
   width: 2px;
   height: 100%; }
 
+.building3 .block0 {
+  width: 100%;
+  height: 85%; }
+.building3 .block1 {
+  width: 80%;
+  height: 100%; }
+
 #startPage {
   background-color: #efefef;
   color: #000000;
   font-family: Verdana, Geneva, sans-serif;
   width: 100%;
   height: 100%;
-  display: block; }
+  display: block;
+  overflow: hidden;
+  position: absolute; }
   #startPage .titles {
     position: absolute;
     left: 50%;
@@ -143,6 +156,8 @@
   width: 100%;
   height: 100%;
   display: block;
+  overflow: hidden;
+  position: absolute;
   background: -moz-linear-gradient(top, #000000, #efefef); }
   #canvasPage .mic-demo {
     display: none; }
@@ -173,9 +188,6 @@
     #canvasPage .factory#liveNoiseFactory {
       height: 20%;
       z-index: 4; }
-
-#models {
-  opacity: 0; }
 
 body {
   width: 100%;
