@@ -50,7 +50,7 @@ var soundSource, concertHallBuffer;
 
 ajaxRequest = new XMLHttpRequest();
 
-ajaxRequest.open('GET', 'audio/BlindLoveDub.mp3', true);
+ajaxRequest.open('GET', 'audio/frequency-demo.mp3', true);
 
 ajaxRequest.responseType = 'arraybuffer';
 
