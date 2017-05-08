@@ -159,31 +159,16 @@ function visualizeLive() {
   analyserLive.fftSize = 256; // Change number of bars 
   var bufferLength = analyserLive.frequencyBinCount; // Actual number of bin sets
   var dataArrayLive = new Uint8Array(bufferLength);
-  
-
-  //canvasCtxLive.clearRect(0, 0, WIDTH, HEIGHT);
 
   function drawLive() {
     drawVisualLive = requestAnimationFrame(drawLive);
 
     analyserLive.getByteFrequencyData(dataArrayLive);
-    //console.log("data array", dataArray);
-    //canvasCtx.fillStyle = 'rgb(200, 200, 200)';
-    //canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 
-    // var barWidth = (WIDTH / bufferLength) * 2.5;
-    // var barHeight;
-    // var x = 0;
 
     if(countLive == 50){ //change eventually to reflect BPM of loaded song
 
-      console.log(dataArrayLive);
-      //console.log("work???")
       renderAnimation.renderLiveBuilding(dataArrayLive[10]); //sends render the med frequencies
-      // renderAnimation.renderHighFreqBuilding(dataArray[20]); //temp, move to actual song render
-      // renderAnimation.renderMedFreqBuilding(dataArray[10]); //temp, move to actual song render
-      // renderAnimation.renderLowFreqBuilding(dataArray[0]);
-      //dataArray[0] for low frequ, dataArray[20] for high freq
       
       countLive = 0;
     }else
