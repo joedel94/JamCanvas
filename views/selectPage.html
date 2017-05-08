@@ -3,15 +3,10 @@
 	<div class="action-wrapper">
 		<div class="demo-img"></div>
 		<div class="action-buttons">
+			<!-- File uploading DOM level--> 
 			<div class="btn"><label for="Song">Upload Song</label>
-				<form ref="uploadForm"
-					id="uploadForm"
-					action="http://localhost:8000/upload"
-					method="post"
-					encType="multipart/form-data">
-					<input type="file" name="song" id="song" class = "fileBtn">
-					<input type="submit" value="Upload" class = "fileBtn">
-				</form>
+				<input type="file" name="song" id="song" class = "fileBtn">
+				<input type="submit" value="Upload" class = "fileBtn" onclick="fileUp()">
 			</div>
 			<div class="btn" onclick="changePage(2)">Begin Projection</div>
 		</div>
@@ -19,3 +14,7 @@
 
 	<button onclick="changePage(0)">Previous</button>
 </div>
+
+<script>
+
+</script>

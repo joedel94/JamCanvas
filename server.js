@@ -4,9 +4,9 @@ var express = require('express');
 var fileUpload = require('express-fileupload');
 var app = express();
 
-app.use(fileUpload());
+//app.use(fileUpload());
 
-app.post('/upload', function(req, res) {
+/*app.post('/upload', function(req, res) {
 	var sampleFile;
 
 	if (!req.files){
@@ -23,7 +23,7 @@ app.post('/upload', function(req, res) {
 			res.send('File uploaded!');
 		}
 	});
-});
+});*/
 
 connect().use(serveStatic(__dirname)).listen(8080, function(){
     console.log('Server running on 8080...');

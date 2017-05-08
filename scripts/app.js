@@ -50,6 +50,22 @@ var soundSource, concertHallBuffer;
 
 ajaxRequest = new XMLHttpRequest();
 
+/*FileUp needs to:
+  1. Get the file path (Currently obtains the fake file path... Dunno if that's ok)
+  2. Call blobService and create a container
+  3. Create a page blob and upload
+  4. Indicate when finished
+*/
+function fileUp(){
+  var song = document.getElementById('song')
+  console.log("fake path to file:" + song.value);
+  //Will fail because we need to create a blobService prior to function call.
+  //Could abstract this by another function
+  blobService.createContainerIfNotExists("test", {publicAccessLevel: "test"}, function(err){
+    console.log("Ran into error");
+  });
+}
+
 ajaxRequest.open('GET', 'audio/frequency-demo.mp3', true);
 
 ajaxRequest.responseType = 'arraybuffer';
@@ -124,113 +140,40 @@ function visualize() {
 
   var visualSetting = visualSelect.value;
 
-  if(visualSetting == "sinewave") {
-    analyser.fftSize = 2048;
-    var bufferLength = analyser.fftSize;
-    var freqBuffLength = analyser.frequencyBinCount;
-    var freqDataArray = new Uint8Array(freqBuffLength);
-    var dataArray = new Uint8Array(bufferLength);
+  
+  var count = 0; // Just for debugging. ****REMOVE BEFORE PROD****
+  analyser.fftSize = 256; // Change number of bars 
+  var bufferLength = analyser.frequencyBinCount; // Actual number of bin sets
+  var dataArray = new Uint8Array(bufferLength);
 
-    canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
+  canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
 
-    function draw() {
+  function draw() {
+    drawVisual = requestAnimationFrame(draw);
 
-      drawVisual = requestAnimationFrame(draw);
+    analyser.getByteFrequencyData(dataArray);
 
-      analyser.getByteTimeDomainData(dataArray);
-      analyser.getByteFrequencyData(freqDataArray);
-
-
-      canvasCtx.fillStyle = 'rgb(200, 200, 200)';
-      canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
-
-      canvasCtx.lineWidth = 2;
-      canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
-
-      canvasCtx.beginPath();
-
-      var sliceWidth = WIDTH * 1.0 / bufferLength;
-      var x = 0;
-
-      for(var i = 0; i < bufferLength; i++) {
-   
-        var v = dataArray[i] / 128.0;
-        var y = v * HEIGHT/2;
-
-        if(freqDataArray[i]>140){
-          canvasCtx.strokeStyle = 'rgb(' + (freqDataArray[i]+50) + ',100,100)';
-          if(freqDataArray[i]>150){
-          canvasCtx.strokeStyle = 'rgb(' + (freqDataArray[i]+100) + ',50,50)'; 
-          }
-        }
-
-        if(i === 0) {
-          canvasCtx.moveTo(x, y);
-        } else {
-          canvasCtx.lineTo(x, y);
-        }
-
-        x += sliceWidth;
-      }
-
-      canvasCtx.lineTo(canvas.width, canvas.height/2);
-      canvasCtx.stroke();
-    };
-
-    draw();
-
-  } else if(visualSetting == "frequencybars") {
-    var count = 0; // Just for debugging. ****REMOVE BEFORE PROD****
-    analyser.fftSize = 256; // Change number of bars 
-    var bufferLength = analyser.frequencyBinCount; // Actual number of bin sets
-    var dataArray = new Uint8Array(bufferLength);
-
-    canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
-
-    function draw() {
-      drawVisual = requestAnimationFrame(draw);
-
-      analyser.getByteFrequencyData(dataArray);
-
-      canvasCtx.fillStyle = 'rgb(200, 200, 200)';
-      canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
-
-      var barWidth = (WIDTH / bufferLength) * 2.5;
-      var barHeight;
-      var x = 0;
-
-      if(count == 50){ //change eventually to reflect BPM of loaded song
-
-        console.log(dataArray);
-        renderAnimation.renderLiveBuilding(dataArray[10]); //sends render the med frequencies
-        renderAnimation.renderHighFreqBuilding(dataArray[20]); //temp, move to actual song render
-        renderAnimation.renderMedFreqBuilding(dataArray[10]); //temp, move to actual song render
-        renderAnimation.renderLowFreqBuilding(dataArray[0]);
-        //dataArray[0] for low frequ, dataArray[20] for high freq
-        
-        count = 0;
-      }else
-        count++;
-
-
-      for(var i = 0; i < bufferLength; i++) {
-        barHeight = dataArray[i];
-
-        canvasCtx.fillStyle = 'rgb(' + (barHeight+100) + ',50,50)';
-        canvasCtx.fillRect(x,HEIGHT-barHeight/2,barWidth,barHeight/2);
-
-        x += barWidth + 1;
-      }
-    };
-
-    draw();
-
-  } else if(visualSetting == "off") {
-    canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
-    canvasCtx.fillStyle = "red";
+    canvasCtx.fillStyle = 'rgb(200, 200, 200)';
     canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
-  }
 
+    var barWidth = (WIDTH / bufferLength) * 2.5;
+    var barHeight;
+    var x = 0;
+
+    if(count == 50){ //change eventually to reflect BPM of loaded song
+
+      console.log(dataArray);
+      renderAnimation.renderLiveBuilding(dataArray[10]); //sends render the med frequencies
+      renderAnimation.renderHighFreqBuilding(dataArray[20]); //temp, move to actual song render
+      renderAnimation.renderMedFreqBuilding(dataArray[10]); //temp, move to actual song render
+      renderAnimation.renderLowFreqBuilding(dataArray[0]);
+      //dataArray[0] for low frequ, dataArray[20] for high freq
+      
+      count = 0;
+    }else
+      count++;
+  };
+  draw();
 }
 
 visualSelect.onchange = function() {
