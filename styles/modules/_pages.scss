@@ -55,6 +55,7 @@
 
 #canvasPage {
 	@include cover;
+	background: linear-gradient(to bottom, $c-black, $c-light-grey);
 	background: -moz-linear-gradient(top, $c-black, $c-light-grey);
 	.mic-demo {
 		display: none;
