@@ -3,7 +3,11 @@
 	color: $c-black;
 	font-family: Verdana, Geneva, sans-serif;
 	@include cover;
-
+	.logo_img{
+		width: 60%;
+		height: 60%;
+		margin: 5% 10% 0% 10%;
+	}
 	.titles {
 		@include center;
 		text-align: center;
