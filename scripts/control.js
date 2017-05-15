@@ -14,6 +14,7 @@ $(document).ready(function() {
 
 function changePage(pageIndex) {
 	var pageName = pages[pageIndex];
+	console.log("change page");
 	$("#page").load("views/" + pageName + ".html", function() {
 		$.getScript("scripts/directives/" + pageName + ".js");
 		currentPage = pageIndex;

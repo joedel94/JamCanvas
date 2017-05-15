@@ -104,6 +104,13 @@
   width: 80%;
   height: 100%; }
 
+.special0 img {
+  height: 165%;
+  position: absolute;
+  left: -292px;
+  width: 680px;
+  bottom: -32%; }
+
 #startPage {
   background-color: #efefef;
   color: #000000;
