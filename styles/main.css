@@ -3,6 +3,10 @@
   padding: 10px 15px;
   cursor: pointer; }
 
+button.disabled, .btn.disabled {
+  opacity: 0.35;
+  cursor: not-allowed; }
+
 #models {
   display: none;
   opacity: 0; }
@@ -141,7 +145,6 @@
     position: relative;
     text-align: center; }
     #selectPage .action-wrapper .demo-img {
-      width: 80%;
       height: 40%;
       margin: 5% 10% 0% 10%; }
     #selectPage .action-wrapper .action-buttons {
