@@ -55,9 +55,15 @@
 			.upload-option {
 				height: 100px;
 				vertical-align: middle;
+				&:hover {
+					opacity: 1;
+				}
 			}
 			.begin-projection {
 				display: block;
+				&.disabled {
+					cursor: not-allowed;
+				}
 			}
 		}
 	}

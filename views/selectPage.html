@@ -7,9 +7,9 @@
 			<!-- File uploading DOM level--> 
 			<div class="btn upload-option"><label for="Song">Upload Song</label>
 				<input type="file" name="song" id="song" class = "fileBtn">
-				<input type="submit" value="Upload" class = "fileBtn" onclick="fileUp()">
+				<input type="submit" value="Upload" class = "fileBtn" onclick="fileUp(this)">
 			</div>
-			<span class="upload-option">OR</span>
+			<span>OR</span>
 			<div class="btn upload-option"><label for="demo">Choose a Demo</label>
 				<select name="demo" id="demo">
 					<option value="" selected>--SELECT--</option>
@@ -17,7 +17,7 @@
 					<option value="BlindLoveDub.mp3">Mid Range Song</option>
 					<option value="frequency-demo.mp3">Volume/Frequency Loop</option>
 				</select>
-				<input type="submit" value="Select" class="fileBtn" onclick="selectDemo()">
+				<input type="submit" value="Select" class="fileBtn" onclick="selectDemo(this)">
 			</div>
 			<div class="btn begin-projection disabled" onclick="changePage(2)">Begin Projection</div>
 		</div>

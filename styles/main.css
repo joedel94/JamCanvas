@@ -3,9 +3,8 @@
   padding: 10px 15px;
   cursor: pointer; }
 
-button.disabled, .btn.disabled {
-  opacity: 0.35;
-  cursor: not-allowed; }
+.disabled {
+  opacity: 0.35; }
 
 #models {
   display: none;
@@ -160,8 +159,12 @@ button.disabled, .btn.disabled {
       #selectPage .action-wrapper .action-buttons .upload-option {
         height: 100px;
         vertical-align: middle; }
+        #selectPage .action-wrapper .action-buttons .upload-option:hover {
+          opacity: 1; }
       #selectPage .action-wrapper .action-buttons .begin-projection {
         display: block; }
+        #selectPage .action-wrapper .action-buttons .begin-projection.disabled {
+          cursor: not-allowed; }
 
 #canvasPage {
   width: 100%;

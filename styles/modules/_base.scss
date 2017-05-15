@@ -4,11 +4,8 @@
 	cursor: pointer;
 }
 
-button, .btn {
-	&.disabled {
-		opacity: 0.35;
-		cursor: not-allowed;
-	}
+.disabled {
+	opacity: 0.35;
 }
 
 #models {

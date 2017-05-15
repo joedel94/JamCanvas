@@ -62,24 +62,7 @@ var soundSource, concertHallBuffer;
 
 ajaxRequest = new XMLHttpRequest();
 
-/*FileUp needs to:
-  1. Get the file path (Currently obtains the fake file path... Dunno if that's ok)
-  2. Call blobService and create a container
-  3. Create a page blob and upload
-  4. Indicate when finished
-*/
-function fileUp(){
-  var song = document.getElementById('song')
-  console.log("fake path to file:" + song.value);
-  //Will fail because we need to create a blobService prior to function call.
-  //Could abstract this by another function
-  blobService.createContainerIfNotExists("test", {publicAccessLevel: "test"}, function(err){
-    console.log("Ran into error");
-  });
-}
-
 if (demoSong) {
-  console.log(demoSong);
   ajaxRequest.open('GET', 'audio/' + demoSong, true);
 
   ajaxRequest.responseType = 'arraybuffer';
