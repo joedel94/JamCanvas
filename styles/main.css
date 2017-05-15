@@ -110,6 +110,10 @@
   display: block;
   overflow: hidden;
   position: absolute; }
+  #startPage .logo_img {
+    width: 60%;
+    height: 60%;
+    margin: 5% 10% 0% 10%; }
   #startPage .titles {
     position: absolute;
     left: 50%;
@@ -134,23 +138,27 @@
     height: 100%;
     overflow: hidden;
     width: auto;
-    position: relative; }
+    position: relative;
+    text-align: center; }
     #selectPage .action-wrapper .demo-img {
-      background-color: #000000;
-      width: 70%;
+      width: 80%;
       height: 40%;
-      margin: 40px auto; }
+      margin: 5% 10% 0% 10%; }
     #selectPage .action-wrapper .action-buttons {
       font-family: Verdana, Geneva, sans-serif;
-      width: 200px;
       margin: auto; }
       #selectPage .action-wrapper .action-buttons .btn {
         background-color: #04a2e0;
         margin: 30px auto;
         color: #FFFFFF;
-        width: 100%;
+        width: 200px;
         padding: 10px 0px;
         text-align: center; }
+      #selectPage .action-wrapper .action-buttons .upload-option {
+        height: 100px;
+        vertical-align: middle; }
+      #selectPage .action-wrapper .action-buttons .begin-projection {
+        display: block; }
 
 #canvasPage {
   width: 100%;

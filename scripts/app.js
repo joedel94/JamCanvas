@@ -78,33 +78,36 @@ function fileUp(){
   });
 }
 
-ajaxRequest.open('GET', 'audio/frequency-demo.mp3', true);
+if (demoSong) {
+  console.log(demoSong);
+  ajaxRequest.open('GET', 'audio/' + demoSong, true);
 
-ajaxRequest.responseType = 'arraybuffer';
+  ajaxRequest.responseType = 'arraybuffer';
 
 
-ajaxRequest.onload = function() {
-  var audioData = ajaxRequest.response;
+  ajaxRequest.onload = function() {
+    var audioData = ajaxRequest.response;
 
-  audioCtx.decodeAudioData(audioData, function(buffer) {
-      //console.log(buffer);
-      concertHallBuffer = buffer;
-      soundSource = audioCtx.createBufferSource();
-      //console.log(soundSource);
-      soundSource.buffer = concertHallBuffer;
-      // Connects request to analyzer
-      soundSource.connect(analyser)
+    audioCtx.decodeAudioData(audioData, function(buffer) {
+        //console.log(buffer);
+        concertHallBuffer = buffer;
+        soundSource = audioCtx.createBufferSource();
+        //console.log(soundSource);
+        soundSource.buffer = concertHallBuffer;
+        // Connects request to analyzer
+        soundSource.connect(analyser)
 
-      // Actually outputs the sound
-      soundSource.connect(audioCtx.destination);
-      soundSource.loop = true;
-      soundSource.start();
-      visualize();
-      //voiceChange();
-    }, function(e){"Error with decoding audio data" + e.err});
+        // Actually outputs the sound
+        soundSource.connect(audioCtx.destination);
+        soundSource.loop = true;
+        soundSource.start();
+        visualize();
+        //voiceChange();
+      }, function(e){"Error with decoding audio data" + e.err});
+  }
+
+  ajaxRequest.send();
 }
-
-ajaxRequest.send();
 
 
 

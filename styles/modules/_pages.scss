@@ -35,6 +35,7 @@
 		overflow: hidden;
 		width: auto;
 		position: relative;
+		text-align: center;
 		.demo-img {
 			width: 80%;
 			height: 40%;
@@ -42,15 +43,22 @@
 		}
 		.action-buttons {
 			font-family: Verdana, Geneva, sans-serif;
-			width: 200px;
+			
 			margin: auto;
 			.btn {
 				background-color: $c-blue;
 				margin: 30px auto;
 				color: $c-white;
-				width: 100%;
+				width: 200px;
 				padding: 10px 0px;
 				text-align: center;
+			}
+			.upload-option {
+				height: 100px;
+				vertical-align: middle;
+			}
+			.begin-projection {
+				display: block;
 			}
 		}
 	}

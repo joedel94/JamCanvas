@@ -1,15 +1,25 @@
 <div id="selectPage">
-	<div class="playlist"></div>
+	<!-- <div class="playlist"></div> -->
 	<div class="action-wrapper">
 		<img class = "demo-img" src="./images/action screenshot.png" alt="Cityscape screenshot">
 			<!--<div class="demo-img"></div>-->
 		<div class="action-buttons">
 			<!-- File uploading DOM level--> 
-			<div class="btn"><label for="Song">Upload Song</label>
+			<div class="btn upload-option"><label for="Song">Upload Song</label>
 				<input type="file" name="song" id="song" class = "fileBtn">
 				<input type="submit" value="Upload" class = "fileBtn" onclick="fileUp()">
 			</div>
-			<div class="btn" onclick="changePage(2)">Begin Projection</div>
+			<span class="upload-option">OR</span>
+			<div class="btn upload-option"><label for="demo">Choose a Demo</label>
+				<select name="demo" id="demo">
+					<option value="" selected>--SELECT--</option>
+					<option value="bensound-dubstep.mp3">Bass Heavy Dubstep Song</option>
+					<option value="BlindLoveDub.mp3">Mid Range Song</option>
+					<option value="frequency-demo.mp3">Volume/Frequency Loop</option>
+				</select>
+				<input type="submit" value="Select" class="fileBtn" onclick="selectDemo()">
+			</div>
+			<div class="btn begin-projection" onclick="changePage(2)">Begin Projection</div>
 		</div>
 	</div>
 

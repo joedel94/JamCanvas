@@ -4,6 +4,7 @@ var pages = {
 	1: "selectPage",
 	2: "canvasPage"
 }
+var demoSong;
 
 
 
