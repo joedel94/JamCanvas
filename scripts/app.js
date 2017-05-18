@@ -62,8 +62,8 @@ var soundSource, concertHallBuffer;
 
 ajaxRequest = new XMLHttpRequest();
 
-if (demoSong) {
-  ajaxRequest.open('GET', 'audio/' + demoSong, true);
+if (selectedSong) {
+  ajaxRequest.open('GET', 'audio/' + selectedSong, true);
 
   ajaxRequest.responseType = 'arraybuffer';
 
@@ -155,6 +155,11 @@ function visualizeLive() {
     if(countLive == 50){ //change eventually to reflect BPM of loaded song
 
       renderAnimation.renderLiveBuilding(dataArrayLive[10]); //sends render the med frequencies
+      if (!selectedSong) {
+        renderAnimation.renderHighFreqBuilding(dataArrayLive[20]);
+        renderAnimation.renderMedFreqBuilding(dataArrayLive[10]);
+        renderAnimation.renderLowFreqBuilding(dataArrayLive[0]);        
+      }
       
       countLive = 0;
     }else

@@ -6,10 +6,15 @@ function selectUploadOption(option) {
 }
 
 function selectDemo(element) {
-	demoSong = $("#demo").val();
-	if (demoSong) {
+	selectedSong = $("#demo").val();
+	if (selectedSong) {
 		selectUploadOption($(element).parent());
 	}	
+}
+
+function selectNoSong(element) {
+  selectedSong = null;
+  selectUploadOption($(element).parent());
 }
 
 /*FileUp needs to:
@@ -28,6 +33,6 @@ function fileUp(element){
   });
 
   //wrap in if statement if upload was successful
-  demoSong = null;
+  selectedSong = null;
   selectUploadOption($(element).parent());
 }
