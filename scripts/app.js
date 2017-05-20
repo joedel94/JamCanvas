@@ -71,6 +71,8 @@ if (selectedSong) {
   ajaxRequest.onload = function() {
     var audioData = ajaxRequest.response;
 
+    animationPreset.setTheme(audioData.byteLength);
+
     audioCtx.decodeAudioData(audioData, function(buffer) {
         //console.log(buffer);
         concertHallBuffer = buffer;

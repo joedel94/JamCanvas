@@ -1,0 +1,39 @@
+
+#canvasPage.shortSong {
+	background: linear-gradient(to bottom, $c-blue, $c-light-grey);
+	background: -moz-linear-gradient(top, $c-blue, $c-light-grey);
+	.building {
+		&.live-noise {
+			.block {
+				background: #2b2e42;		
+			}
+			.shape {
+				border-color: #2b2e42;
+			}
+		}
+		&.high-frequency {
+			.block {
+				background: #d84b2f;
+			}
+			.shape {
+				border-color: #d84b2f;
+			}
+		}
+		&.med-frequency {
+			.block {
+				background: #d87b2e;
+			}
+			.shape {
+				border-color: #d87b2e;
+			}
+		}
+		&.low-frequency {
+			.block {
+				background: #98a085;
+			}
+			.shape {
+				border-color: #98a085;
+			}
+		}
+	}
+}
