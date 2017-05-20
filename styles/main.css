@@ -160,19 +160,45 @@
   display: block;
   overflow: hidden;
   position: absolute; }
-  #startPage .logo_img {
-    width: 60%;
-    height: 60%;
-    margin: 5% 10% 0% 10%; }
-  #startPage .titles {
+  #startPage .attractAni {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    text-align: center; }
+    width: 90%;
+    height: 500px; }
+    #startPage .attractAni .staff {
+      width: 100%;
+      height: 200px;
+      position: absolute;
+      top: 60px;
+      display: flex;
+      flex-direction: column; }
+      #startPage .attractAni .staff .line {
+        width: 100%;
+        flex: 1;
+        border-bottom: 3px solid #000000; }
+    #startPage .attractAni .logo {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%); }
+      #startPage .attractAni .logo img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%); }
+  #startPage .titles {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    bottom: 15%; }
     #startPage .titles .btn {
       background-color: #04a2e0;
-      color: #FFFFFF; }
+      color: #FFFFFF;
+      border-radius: 8px; }
 
 #selectPage {
   font-family: Verdana, Geneva, sans-serif; }

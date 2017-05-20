@@ -3,14 +3,34 @@
 	color: $c-black;
 	font-family: Verdana, Geneva, sans-serif;
 	@include cover;
-	.logo_img{
-		width: 60%;
-		height: 60%;
-		margin: 5% 10% 0% 10%;
+	.attractAni {
+		@include center;
+		width: 90%;
+		height: 500px;
+		.staff {			
+			width: 100%;
+			height: 200px;
+			position: absolute;
+			top: 60px;
+			display: flex;
+			flex-direction: column;
+			.line {
+				width: 100%;
+				flex: 1;
+				border-bottom: 3px solid $c-black;
+			}
+		}
+		.logo {
+			@include center;
+			img {
+				@include center;
+			}
+		}
 	}
 	.titles {
-		@include center;
+		@include middle;
 		text-align: center;
+		bottom: 15%;
 		.btn {
 			background-color: $c-blue;
 			color: $c-white;
