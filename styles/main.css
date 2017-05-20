@@ -131,6 +131,26 @@
   #canvasPage.shortSong .building.low-frequency .shape {
     border-color: #98a085; }
 
+#canvasPage.mediumSong {
+  background: linear-gradient(to bottom, #6295c1, #efefef);
+  background: -moz-linear-gradient(top, #6295c1, #efefef); }
+  #canvasPage.mediumSong .building.live-noise .block {
+    background: #2c2d1c; }
+  #canvasPage.mediumSong .building.live-noise .shape {
+    border-color: #2c2d1c; }
+  #canvasPage.mediumSong .building.high-frequency .block {
+    background: #bdc65b; }
+  #canvasPage.mediumSong .building.high-frequency .shape {
+    border-color: #bdc65b; }
+  #canvasPage.mediumSong .building.med-frequency .block {
+    background: #969b60; }
+  #canvasPage.mediumSong .building.med-frequency .shape {
+    border-color: #969b60; }
+  #canvasPage.mediumSong .building.low-frequency .block {
+    background: #6a6d4c; }
+  #canvasPage.mediumSong .building.low-frequency .shape {
+    border-color: #6a6d4c; }
+
 #startPage {
   background-color: #efefef;
   color: #000000;

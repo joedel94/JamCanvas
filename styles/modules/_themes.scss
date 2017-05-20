@@ -37,3 +37,43 @@
 		}
 	}
 }
+
+
+#canvasPage.mediumSong {
+	background: linear-gradient(to bottom, #6295c1, $c-light-grey);
+	background: -moz-linear-gradient(top, #6295c1, $c-light-grey);
+	.building {
+		&.live-noise {
+			.block {
+				background: #2c2d1c;		
+			}
+			.shape {
+				border-color: #2c2d1c;
+			}
+		}
+		&.high-frequency {
+			.block {
+				background: #bdc65b;
+			}
+			.shape {
+				border-color: #bdc65b;
+			}
+		}
+		&.med-frequency {
+			.block {
+				background: #969b60;
+			}
+			.shape {
+				border-color: #969b60;
+			}
+		}
+		&.low-frequency {
+			.block {
+				background: #6a6d4c;
+			}
+			.shape {
+				border-color: #6a6d4c;
+			}
+		}
+	}
+}

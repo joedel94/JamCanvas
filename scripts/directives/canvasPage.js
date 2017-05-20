@@ -13,7 +13,7 @@ var animationPreset = {
 			$("#canvasPage").addClass("shortSong");
 		}
 		else if (fileSize < this.mediumSongMax) {
-			$("#canvasPage").addClass("medSong");
+			$("#canvasPage").addClass("mediumSong");
 		}
 		
 	}
