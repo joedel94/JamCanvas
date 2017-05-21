@@ -20,6 +20,39 @@
 				border-bottom: 3px solid $c-black;
 			}
 		}
+		.notes {
+			position: relative;
+			width: 100%;
+			height: 300px;
+			.note {
+				position: absolute;
+				height: 120px;
+				width: auto;
+				&.note0 {
+					top: 105px;
+				}
+				&.note1 {
+					top: 45px;
+					left: 12%;
+				}
+				&.note2 {
+					top: 165px;
+					left: 20%;
+				}
+				&.note3 {
+					top: 65px;
+					right: 20%;
+				}
+				&.note4 {
+					top: 125px;
+					right: 10%;
+				}
+				&.note5 {
+					top: 25px;
+					right: -3%;				
+				}
+			}
+		}
 		.logo {
 			@include center;
 			img {
