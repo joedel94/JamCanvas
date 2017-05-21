@@ -17,6 +17,8 @@ var attractAnimation = {
 		TweenMax.to(this.text, 1.5, {alpha: 1, delay: 1});
 		this.aniStaffLines();
 		this.aniNotes();
+
+		TweenMax.to(this.cta, 1, {alpha: 1, delay: 4});
 	},
 	setElements: function() {
 		TweenMax.set(this.staffLines, {width: "0%"});
