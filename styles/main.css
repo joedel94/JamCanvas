@@ -207,12 +207,23 @@
       position: absolute;
       left: 50%;
       top: 50%;
-      transform: translate(-50%, -50%); }
+      transform: translate(-50%, -50%);
+      z-index: 1; }
       #startPage .attractAni .logo img {
         position: absolute;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%); }
+      #startPage .attractAni .logo .whitespace {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+        height: 500px;
+        width: 300px;
+        background: #efefef;
+        z-index: -1; }
   #startPage .titles {
     position: absolute;
     bottom: 0;
