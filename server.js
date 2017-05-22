@@ -25,6 +25,7 @@ var blobService = azure.createBlobService('jamcanvas1727', 'CpklHsCHIvpt/tyx1b/5
     } else {
       var blobs = result.entries;
       var blobsDownloaded = 0;
+      var listJSON = [];
 
       blobs.forEach(function (blob) {
           blobService.getBlobToLocalFile("demouser", blob.name, './uploads/' + blob.name, function (error2) {
@@ -35,10 +36,20 @@ var blobService = azure.createBlobService('jamcanvas1727', 'CpklHsCHIvpt/tyx1b/5
             console.log(error2);
           } else {
             console.log(' Blob ' + blob.name + ' download finished.');
+            listJSON.push('"' + blob.name + '"');
+
 
             if (blobsDownloaded === blobs.length) {
               // Wait until all workers complete and the blobs are downloaded
               console.log('All files downloaded');
+
+              fs.writeFile("./uploads/list.json", "[" + listJSON + "]" , function(err) {
+                  if(err) {
+                      return console.log(err);
+                  }
+
+                  console.log("The file was saved!");
+              }); 
             }
           }
         });

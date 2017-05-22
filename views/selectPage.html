@@ -5,11 +5,13 @@
 			<!--<div class="demo-img"></div>-->
 		<div class="action-buttons">
 			<!-- File uploading DOM level--> 
-<!-- 			<div class="btn upload-option"><label for="Song">Upload Song</label>
-				<input type="file" name="song" id="song" class = "fileBtn">
-				<input type="submit" value="Upload" class = "fileBtn" onclick="fileUp(this)">
+			<div class="btn upload-option"><label for="upload">Select Uploaded Song</label>
+				<select name="upload" id="upload">
+					<option value="" selected>--SELECT--</option>
+				</select>
+				<input type="submit" value="Select" class="fileBtn" onclick="selectUpload(this)">
 			</div>
-			<span>OR</span> -->
+			<span>OR</span>
 			<div class="btn upload-option"><label for="demo">Choose a Demo</label>
 				<select name="demo" id="demo">
 					<option value="" selected>--SELECT--</option>
