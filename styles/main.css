@@ -232,12 +232,14 @@
       #startPage .attractAni .staff .line {
         width: 100%;
         flex: 1;
-        border-bottom: 3px solid #000000; }
+        border-bottom: 3px solid #000000;
+        opacity: 0; }
     #startPage .attractAni .notes {
       position: relative;
       width: 100%;
       height: 300px; }
       #startPage .attractAni .notes .note {
+        opacity: 0;
         position: absolute;
         height: 120px;
         width: auto; }
@@ -268,7 +270,8 @@
         position: absolute;
         left: 50%;
         top: 50%;
-        transform: translate(-50%, -50%); }
+        transform: translate(-50%, -50%);
+        opacity: 0; }
       #startPage .attractAni .logo .whitespace {
         position: absolute;
         left: 50%;
@@ -285,7 +288,8 @@
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    bottom: 25%; }
+    bottom: 25%;
+    opacity: 0; }
     #startPage .titles .btn {
       background-color: #04a2e0;
       color: #FFFFFF;

@@ -18,6 +18,7 @@
 				width: 100%;
 				flex: 1;
 				border-bottom: 3px solid $c-black;
+				opacity: 0;
 			}
 		}
 		.notes {
@@ -25,6 +26,7 @@
 			width: 100%;
 			height: 300px;
 			.note {
+				opacity: 0;
 				position: absolute;
 				height: 120px;
 				width: auto;
@@ -58,6 +60,7 @@
 			z-index: 1;
 			img {
 				@include center;
+				opacity: 0;
 			}
 			.whitespace {
 				@include center;
@@ -73,6 +76,7 @@
 		@include middle;
 		text-align: center;
 		bottom: 25%;
+		opacity: 0;
 		.btn {
 			background-color: $c-blue;
 			color: $c-white;
