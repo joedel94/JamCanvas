@@ -12,8 +12,9 @@ function populateUploadList() {
 }
 
 function selectSoundOption(option) {
-	$(".upload-option").removeClass("disabled");
-	$(".upload-option").not(option).addClass("disabled");
+  $(".begin-projection").removeClass("disabled");
+  $(".upload-option").removeClass("disabled");
+  $(".upload-option").not(option).addClass("disabled");
 }
 
 function selectUpload(element) {
