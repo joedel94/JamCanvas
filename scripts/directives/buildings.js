@@ -34,6 +34,12 @@ var renderAnimation = {
 	demolishBuilding: function(element) {
 		$(element).remove();
 	},
+	removeShape: function(element, height) {
+		if (height < 20) {
+			$(".shape", element).hide();
+		}
+
+	},
 	renderLiveBuilding: function(frequency) {
 		var scaffolding = this.selectBuilding().addClass('live-noise in-construction');
 		$("#liveNoiseFactory").append(scaffolding);
@@ -43,6 +49,8 @@ var renderAnimation = {
 
 		var t = 5; //calculate using BPM
 		var buildingHeight = (frequency / this.maxMedFrequency) * 100;
+		this.removeShape(scaffolding, buildingHeight);
+
 		TweenMax.set(scaffolding, {right: 0, height: buildingHeight + "%"});
 		TweenMax.to(scaffolding, t, {
 			right: '100%',
@@ -61,6 +69,8 @@ var renderAnimation = {
 
 		var t = 7; //calculate using BPM
 		var buildingHeight = (frequency / this.maxHighFrequency) * 100;
+		this.removeShape(scaffolding, buildingHeight);
+
 		TweenMax.set(scaffolding, {right: 0, height: buildingHeight + "%"});
 		TweenMax.to(scaffolding, t, {
 			right: '100%',
@@ -79,6 +89,8 @@ var renderAnimation = {
 
 		var t = 10; //calculate using BPM
 		var buildingHeight = (frequency / this.maxMedFrequency) * 100;
+		this.removeShape(scaffolding, buildingHeight);
+
 		TweenMax.set(scaffolding, {right: 0, height: buildingHeight + "%"});
 		TweenMax.to(scaffolding, t, {
 			right: '100%',
@@ -97,6 +109,8 @@ var renderAnimation = {
 
 		var t = 12; //calculate using BPM
 		var buildingHeight = (frequency / this.maxLowFrequency) * 100;
+		this.removeShape(scaffolding, buildingHeight);
+
 		TweenMax.set(scaffolding, {right: 0, height: buildingHeight + "%"});
 		TweenMax.to(scaffolding, t, {
 			right: '100%',
