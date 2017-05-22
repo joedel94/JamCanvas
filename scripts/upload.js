@@ -1,5 +1,5 @@
-var azure = require('azure-storage');
-var fs = require('fs');
+/*var azure = require('azure-storage');
+//var fs = require('fs');
 
 var blobService = azure.createBlobService();
 
@@ -36,4 +36,4 @@ blobService.deleteContainerIfExists('containerName', function(error, result, res
 	if(!error){
 		//Do something
 	}
-});
+});*/

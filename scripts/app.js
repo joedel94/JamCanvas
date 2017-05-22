@@ -87,7 +87,6 @@ if (selectedSong) {
         soundSource.loop = true;
         soundSource.start();
         visualize();
-        //voiceChange();
       }, function(e){"Error with decoding audio data" + e.err});
   }
 
@@ -178,7 +177,7 @@ function visualize() {
   var visualSetting = visualSelect.value;
 
   
-  var count = 0; // Just for debugging. ****REMOVE BEFORE PROD****
+  var count = 0; // Handles spacing between buildings (how many times a new building is needed to be rendered)
   analyser.fftSize = 256; // Change number of bars 
   var bufferLength = analyser.frequencyBinCount; // Actual number of bin sets
   var dataArray = new Uint8Array(bufferLength);
@@ -197,15 +196,10 @@ function visualize() {
     var barHeight;
     var x = 0;
 
-    if(count == 50){ //change eventually to reflect BPM of loaded song
-
-      //console.log(dataArray);
-      //renderAnimation.renderLiveBuilding(dataArray[10]); //sends render the med frequencies
+    if(count == 50){ 
       renderAnimation.renderHighFreqBuilding(dataArray[20]); //temp, move to actual song render
       renderAnimation.renderMedFreqBuilding(dataArray[10]); //temp, move to actual song render
       renderAnimation.renderLowFreqBuilding(dataArray[0]);
-      //dataArray[0] for low frequ, dataArray[20] for high freq
-      
       count = 0;
     }else
       count++;
