@@ -138,8 +138,8 @@
 
 #canvasPage {
 	@include cover;
-	background: linear-gradient(to bottom, $c-black, $c-light-grey);
-	background: -moz-linear-gradient(top, $c-black, $c-light-grey);
+	background: linear-gradient(to bottom, $c-black, $c-white);
+	background: -moz-linear-gradient(top, $c-black, $c-white);
 	.mic-demo {
 		display: none;
 	}
@@ -154,6 +154,7 @@
 			fill: $c-white;
 			top: 0;
 			right: 0;
+			z-index: 5;
 		}
 	}
 	.factory {

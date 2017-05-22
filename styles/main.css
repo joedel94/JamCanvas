@@ -111,9 +111,62 @@
   width: 680px;
   bottom: -32%; }
 
+#canvasPage {
+  /* ============================================================================================== 
+  Nick Mkrtchyan
+  http://www.facebook.com/sonick.pk
+  http://www.Mkrtchyan.zz.mu
+  ================================================================================================= */ }
+  #canvasPage .background {
+    opacity: .2; }
+@keyframes move-twink-back {
+  from {
+    background-position: 0 0; }
+  to {
+    background-position: -10000px 5000px; } }
+@-moz-keyframes move-twink-back {
+  from {
+    background-position: 0 0; }
+  to {
+    background-position: -10000px 5000px; } }
+@keyframes move-clouds-back {
+  from {
+    background-position: 0 0; }
+  to {
+    background-position: 10000px 0; } }
+@-webkit-keyframes move-clouds-back {
+  from {
+    background-position: 0 0; }
+  to {
+    background-position: 10000px 0; } }
+    #canvasPage .background .stars, #canvasPage .background .twinkling, #canvasPage .background .clouds {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      display: block; }
+    #canvasPage .background .stars {
+      background: #000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+      z-index: 0; }
+    #canvasPage .background .twinkling {
+      background: transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+      z-index: 1;
+      -moz-animation: move-twink-back 200s linear infinite;
+      animation: move-twink-back 200s linear infinite; }
+    #canvasPage .background .clouds {
+      background: transparent url(http://www.script-tutorials.com/demos/360/images/clouds3.png) repeat top center;
+      z-index: 3;
+      -moz-animation: move-clouds-back 200s linear infinite;
+      animation: move-clouds-back 200s linear infinite; }
+
 #canvasPage.shortSong {
   background: linear-gradient(to bottom, #04a2e0, #efefef);
   background: -moz-linear-gradient(top, #04a2e0, #efefef); }
+  #canvasPage.shortSong .background {
+    display: none; }
   #canvasPage.shortSong .building.live-noise .block {
     background: #2b2e42; }
   #canvasPage.shortSong .building.live-noise .shape {
@@ -134,6 +187,8 @@
 #canvasPage.mediumSong {
   background: linear-gradient(to bottom, #6295c1, #efefef);
   background: -moz-linear-gradient(top, #6295c1, #efefef); }
+  #canvasPage.mediumSong .background {
+    display: none; }
   #canvasPage.mediumSong .building.live-noise .block {
     background: #2c2d1c; }
   #canvasPage.mediumSong .building.live-noise .shape {
@@ -285,8 +340,8 @@
   display: block;
   overflow: hidden;
   position: absolute;
-  background: linear-gradient(to bottom, #000000, #efefef);
-  background: -moz-linear-gradient(top, #000000, #efefef); }
+  background: linear-gradient(to bottom, #000000, #FFFFFF);
+  background: -moz-linear-gradient(top, #000000, #FFFFFF); }
   #canvasPage .mic-demo {
     display: none; }
   #canvasPage #sky {
@@ -299,7 +354,8 @@
       position: absolute;
       fill: #FFFFFF;
       top: 0;
-      right: 0; }
+      right: 0;
+      z-index: 5; }
   #canvasPage .factory {
     width: calc(100% + 100px);
     position: absolute;
