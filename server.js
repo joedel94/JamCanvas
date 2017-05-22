@@ -27,8 +27,9 @@ var blobService = azure.createBlobService('jamcanvas1727', 'CpklHsCHIvpt/tyx1b/5
       var blobsDownloaded = 0;
 
       blobs.forEach(function (blob) {
-          blobService.getBlobToLocalFile("demouser", blob.name, '/Users/Chris/Desktop/BackUp/Website-projects/JamCanvas/JamCanvas/public/uploads/' + blob.name, function (error2) {
+          blobService.getBlobToLocalFile("demouser", blob.name, '../JamCanvas/public/uploads/' + blob.name, function (error2) {
           blobsDownloaded++;
+          var selectedSong = blob.name;
 
           if (error2) {
             console.log(error2);
