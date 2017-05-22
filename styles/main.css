@@ -178,6 +178,31 @@
         width: 100%;
         flex: 1;
         border-bottom: 3px solid #000000; }
+    #startPage .attractAni .notes {
+      position: relative;
+      width: 100%;
+      height: 300px; }
+      #startPage .attractAni .notes .note {
+        position: absolute;
+        height: 120px;
+        width: auto; }
+        #startPage .attractAni .notes .note.note0 {
+          top: 105px; }
+        #startPage .attractAni .notes .note.note1 {
+          top: 45px;
+          left: 12%; }
+        #startPage .attractAni .notes .note.note2 {
+          top: 165px;
+          left: 20%; }
+        #startPage .attractAni .notes .note.note3 {
+          top: 65px;
+          right: 20%; }
+        #startPage .attractAni .notes .note.note4 {
+          top: 125px;
+          right: 10%; }
+        #startPage .attractAni .notes .note.note5 {
+          top: 25px;
+          right: -3%; }
     #startPage .attractAni .logo {
       position: absolute;
       left: 50%;
@@ -194,7 +219,7 @@
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    bottom: 15%; }
+    bottom: 25%; }
     #startPage .titles .btn {
       background-color: #04a2e0;
       color: #FFFFFF;
@@ -203,10 +228,10 @@
 #selectPage {
   font-family: Verdana, Geneva, sans-serif; }
   #selectPage .fileBtn {
-   padding: 5px 10px;
-		margin: 5px	;
-		border-radius: 4px;
-		border: none;  }
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 4px;
+    border: none; }
   #selectPage .playlist {
     background-color: #c8ccce;
     width: 40%;
@@ -231,7 +256,8 @@
         color: #FFFFFF;
         width: 200px;
         padding: 10px 0px;
-        text-align: center; }
+        text-align: center;
+        border-radius: 8px; }
       #selectPage .action-wrapper .action-buttons .upload-option {
         height: 100px;
         vertical-align: middle; }
