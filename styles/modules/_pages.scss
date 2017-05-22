@@ -144,8 +144,13 @@
 	@include cover;
 	background: linear-gradient(to bottom, $c-black, $c-white);
 	background: -moz-linear-gradient(top, $c-black, $c-white);
+	overflow-y: visible;
 	.mic-demo {
 		display: none;
+	}
+	.controls {
+		position: absolute;
+		top: 100%;
 	}
 	#sky {
 		width: calc(100% + 200px);

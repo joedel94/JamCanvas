@@ -19,3 +19,7 @@ var animationPreset = {
 	}
 }
 
+function toggleLiveMicFeed() {
+	$("#liveNoiseFactory").toggle();
+}
+
