@@ -1,5 +1,15 @@
 <div id="canvasPage">
-	<!-- <button onclick="$('.mic-demo').toggle()">Mic Demo</button> -->
+	<div class="controls">
+		<button onclick="changePage(0)">Back To Start</button>
+		<button onclick="changePage(1)">Back To Select</button>
+		<button onclick="toggleLiveMicFeed()">Toggle Live Feed</button>
+	</div>
+	<div class="background">
+		<div class="stars"></div>
+		<div class="twinkling"></div>
+		<div class="clouds"></div>	
+	</div>
+
 	<div id="sky"></div>	
 	<div id="liveNoiseFactory" class="factory"></div>
 	<div id="highFreqFactory" class="factory"></div>
@@ -23,44 +33,4 @@
 			<option value="off">Off</option>
 		</select>
 	</div>
-</div>
-
-<div id="models">
-	<div class="building special0"><img src="images/Collumns Building SVG.svg"></div>
-	<div id="window-model" class="window"></div>
-	<div class="building high-frequency building1">
-		<div class="shape block4"></div>
-		<div class="block block3"></div>
-		<div class="block block2"></div>
-		<div class="block block1 windows"></div>
-		<div class="block block0"></div>
-	</div>
-
-	<div class="building high-frequency building0">
-		<div class="block block0 windows"></div>
-	</div>
-
-	<div class="building high-frequency building3">
-		<div class="block block1"></div>
-		<div class="block block0 windows"></div>
-	</div>
-
-
-	<div class="building high-frequency building2">
-		<div class="block block4"></div>
-		<div class="block block3"></div>
-		<div class="block block2"></div>
-		<div class="block block1"></div>
-		<div class="block block0 windows"></div>
-	</div>
-
-	<svg viewBox='0 0 105 105'>
-		<path d='M 25,60 
-			a 20,20 1 0,0 0,40 
-			h 50 
-			a 20,20 1 0,0 0,-40 
-			a 10,10 1 0,0 -15,-10 
-			a 15,15 1 0,0 -35,10  
-			z' />
-	</svg>
 </div>

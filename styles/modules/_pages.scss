@@ -18,6 +18,7 @@
 				width: 100%;
 				flex: 1;
 				border-bottom: 3px solid $c-black;
+				opacity: 0;
 			}
 		}
 		.notes {
@@ -25,6 +26,7 @@
 			width: 100%;
 			height: 300px;
 			.note {
+				opacity: 0;
 				position: absolute;
 				height: 120px;
 				width: auto;
@@ -55,8 +57,18 @@
 		}
 		.logo {
 			@include center;
+			z-index: 1;
 			img {
 				@include center;
+				opacity: 0;
+			}
+			.whitespace {
+				@include center;
+				display: block;
+				height: 500px;
+				width: 300px;
+				background: $c-light-grey;
+				z-index: -1;
 			}
 		}
 	}
@@ -64,6 +76,7 @@
 		@include middle;
 		text-align: center;
 		bottom: 25%;
+		opacity: 0;
 		.btn {
 			background-color: $c-blue;
 			color: $c-white;
@@ -129,10 +142,15 @@
 
 #canvasPage {
 	@include cover;
-	background: linear-gradient(to bottom, $c-black, $c-light-grey);
-	background: -moz-linear-gradient(top, $c-black, $c-light-grey);
+	background: linear-gradient(to bottom, $c-black, $c-white);
+	background: -moz-linear-gradient(top, $c-black, $c-white);
+	overflow-y: visible;
 	.mic-demo {
 		display: none;
+	}
+	.controls {
+		position: absolute;
+		top: 100%;
 	}
 	#sky {
 		width: calc(100% + 200px);
@@ -145,6 +163,7 @@
 			fill: $c-white;
 			top: 0;
 			right: 0;
+			z-index: 5;
 		}
 	}
 	.factory {
